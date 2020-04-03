@@ -1,0 +1,31 @@
+header {
+ height: 400px;
+}
+
+header.top p {
+  font-size: 50px;
+}
+
+p#intro-p {
+ font-size: 32px;
+}
+p {
+ font-size: 22px;
+}
+p#intro-p {
+ font-size: 16px;
+}
+
+/* Fun with pseudo-classes */
+section.transformed-images img:nth-child(2n) {
+  transform: rotate(-10deg);
+}
+section.transformed-images img:nth-child(odd) {
+  transform: rotate(10deg);
+}
+section.transformed-images img:nth-child(odd):hover {
+  transform: rotate(-10deg);
+}
+img {
+  width: 50px;
+}

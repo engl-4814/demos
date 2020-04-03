@@ -1,0 +1,33 @@
+/* Practice CSS Selection */
+
+/* TYPE SELECTORS */
+
+header {
+  height: 500px;
+}
+
+/* ID SELECTION */
+p#intro-p {
+  font-size: 32px;
+}
+
+/* CLASS SELECTION */
+.top {
+  font-size: 1.5rem;
+}
+
+/* COMBINATORS */
+
+/* Descendant */
+header p {
+  border: 1px solid black;
+}
+
+/* Child */
+header > p {
+  border: 10px dashed black;
+}
+
+section#lorem-cicero-speech-1 p {
+  background-color: green;
+}

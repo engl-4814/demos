@@ -1,0 +1,73 @@
+/* 
+  Index
+  - TYPOGRAPHY
+  - MAIN CONTAINERS
+  - GRID
+  - COMPONENTS
+ */
+
+/* TYPOGRAPHY */
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+a:active {
+  color: red;
+}
+
+p:first-of-type {
+  color: #7E8184;
+  font-style: italic;
+}
+
+.synopsis {
+  color: #7E8184;
+  font-style: italic;
+}
+
+/* MAIN CONTAINERS */
+article {
+  max-width: 700px;
+  margin: auto auto;
+}
+
+/* GRID */
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* COMPONENTS */
+
+/* Buttons */
+.button:link,
+.button:visited {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+  background-color: #5995DA;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #5D6063;
+  border-radius: 5px;
+  width: 200px;
+  margin: 20px auto;
+}
+.button:hover,
+.button:visited:hover {
+  color: #FFF;
+  background-color: #76AEED;  /* Light blue */
+}
+.button:active,
+.button:visited:active {
+  color: #FFF;
+  background-color: #5995DA;  /* Blue */
+}

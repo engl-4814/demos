@@ -2,4 +2,4 @@
 
 Code samples originally from Rachel Andrew's book: [The New CSS Layout](https://abookapart.com/products/the-new-css-layout).
 
-There is an `index.html` that links to each individual file.
+Here is the [index.html](https://engl-4814.github.io/demos/new-css-layout-code/) that links to each individual file.

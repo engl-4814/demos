@@ -47,6 +47,14 @@
             grid-row: 3;
         }
 
+        @media screen and (max-width: 660px) {
+            .cards {
+                display: block;
+            }
+            .cards li {
+                margin-top: 20px;
+            }
+        }
 
     </style>
 </head>
@@ -63,7 +71,6 @@
         </div>
     </header>
     <div class="example">
-
         <ul class="cards">
             <li class="card1">
                 <h2>Card 1</h2>
@@ -73,7 +80,6 @@
                 <h2>Card 2</h2>
                 <p>These cards have been laid out using grid layout. Card 2 is between column lines 3 and 4, row lines 1 and 2.</p>
             </li>
-            
              <li class="card3">
                 <h2>Card 3</h2>
                 <p>These cards have been laid out using grid layout. Card 3 is between column lines 1 and 2, row lines 2 and 4.</p>
@@ -86,10 +92,7 @@
                 <h2>Card 5</h2>
                 <p>These cards have been laid out using grid layout. Card 5 is between column lines 2 and 4, row lines 3 and 4.</p>
             </li>
-            
-             
         </ul>
-	 
     </div>
 </body>
 </html>

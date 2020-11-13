@@ -1,3 +1,3 @@
 # Demos Folder for ENGL 4814
 
-Example text.
+This repo contains code for different demonstrations that I review in my lecture videos.

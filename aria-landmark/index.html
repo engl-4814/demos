@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>ARIA landmark role use example</title>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header role="banner">
+    <img src="https://via.placeholder.com/100x50" alt="Image logo for ARIA featuring all senses used to perceive and navigate content." />
+    <h1 aria-label="My ARIA Landmark Example Page">My ARIA Landmark Example Page</h1>
+  </header>
+  <div class="grid-parent">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+    <main role="main">
+      <h2 aria-label="My main focused content is in here">My main focused content is in here.</h2>
+      <section aria-labelledby="region1">
+        <h3 id="region1">Title for region area 1</h3>
+        <p>Content for region area 1. Read more information about <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/region.html#tabpanel2" target="_blank" rel="noopenner">region ARIA labels</a> for section elements.</p>
+      </section>
+      <section aria-labelledby="region2">
+        <h3 id="region2">Title for region area 2</h3>
+        <p>Content for region area 2</p>
+      </section>
+    </main>
+    <aside> aside
+      <div role="form" id="form"> form
+        <div id="search" role="search">search</div>
+      </div>
+    </aside>
+    <footer id="contentinfo" role="contentinfo">
+      footer#contentinfo
+    </footer>
+  </div>
+</body>
+</html>

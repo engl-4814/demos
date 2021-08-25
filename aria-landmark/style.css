@@ -1,7 +1,5 @@
 header,nav,main,footer,aside,div {
-  padding: 2%;
   border: solid 2px #000000;
-  margin: 10px;
   font: bold larger "Courier New", Courier, monospace;
   white-space: inherit;
 }
@@ -12,12 +10,13 @@ footer {grid-area: footer;}
 aside {grid-area: aside;}
 .grid-parent {
   display: grid;
+  grid-gap: 15px;
   grid-template-areas: 
     "nav main main main aside"
     "footer footer footer footer footer";
 }
-header,footer {height:100px;}
-nav,main,aside {height:400px;}
+header,footer {padding:15px;}
+nav,main,aside {height:400px;padding:15px;}
 nav {background:#7fff00;}
 main {background:#f0e68c;}
 aside {background:#4682b4;}

@@ -1,9 +1,20 @@
+/* 
+ * Basic Font Styles
+ */
 header,nav,main,footer,aside,div {
-  border: solid 2px #000000;
-  font: bold larger "Courier New", Courier, monospace;
+  font: "Courier New", Courier, monospace;
   white-space: inherit;
 }
-header {display: flex;gap: 10px;}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 1em;
+}
+
+/* 
+ * Flexbox and Grid
+ */
+header {display:flex;gap:10px;}
 nav {grid-area: nav;}
 main {grid-area: main;}
 footer {grid-area: footer;}
@@ -15,12 +26,36 @@ aside {grid-area: aside;}
     "nav main main main aside"
     "footer footer footer footer footer";
 }
-header,footer {padding:15px;}
-nav,main,aside {height:400px;padding:15px;}
+
+/* 
+ * Layout Differentiation
+ */
+header,footer {margin:5px;padding:15px;}
+nav,main,aside {height:100%;margin:5px;padding:15px;}
 nav {background:#7fff00;}
 main {background:#f0e68c;}
-aside {background:#4682b4;}
+aside {background:#4682b4;width: 200px;}
 #search {background:#ffff00;font-size:small;}
 #form {background:#fafad2;font-size:medium;}
 header {background:#ff8c00;}
 footer#contentinfo {background:#ffb6c1;}
+
+/* Skip Link */
+a.skip-to-link {
+  position: absolute;
+  left: -999px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+}
+a.skip-to-link:focus {
+  color: black;
+  display: inline-block;
+  height: auto;
+  width: auto;
+  position: static;
+  margin: auto;
+}
+
+/* Other Styles */
+abbr {cursor: help;}

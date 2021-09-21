@@ -5,36 +5,73 @@
   <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a href="#main" class="skip-to-link">Skip to content</a>
   <header role="banner">
     <img src="https://via.placeholder.com/100x50" alt="Image logo for ARIA featuring all senses used to perceive and navigate content." />
-    <h1 aria-label="My ARIA Landmark Example Page">My ARIA Landmark Example Page</h1>
+    <h1 aria-label="My ARIA Landmark Example Page">
+      A11Y'R'Us
+    </h1>
   </header>
   <div class="grid-parent">
-    <nav>
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <main role="main">
-      <h2 aria-label="My main focused content is in here">My main focused content is in here.</h2>
-      <section aria-labelledby="region1">
-        <h3 id="region1">Title for region area 1</h3>
-        <p>Content for region area 1. Read more information about <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/region.html#tabpanel2" target="_blank" rel="noopenner">region ARIA labels</a> for section elements.</p>
+    
+    <main id="main" role="main">
+      <h2 aria-label="Learn about the POUR Model and screen readers.">
+        Welcome to our accessible A11Y demo page!
+      </h2>
+      <section id="pour-model" aria-labelledby="Learn about the POUR model">
+        <h3 id="region1">
+          Landmark 1: <abbr title="Perceivable, Operable, Understandable, and Robust">P.O.U.R</abbr> Model
+        </h3>
+        <p>
+          Content for landmark area 1: P.O.U.R Model. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit. Id ornare arcu odio ut sem nulla pharetra. Amet risus nullam eget felis eget nunc lobortis. Magna ac placerat vestibulum lectus mauris ultrices eros in. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Quis auctor elit sed vulputate mi sit amet mauris commodo. Quis hendrerit dolor magna eget est. Magna eget est lorem ipsum dolor sit. Sagittis id consectetur purus ut faucibus. Hac habitasse platea dictumst quisque sagittis purus.
+        </p>
       </section>
-      <section aria-labelledby="region2">
-        <h3 id="region2">Title for region area 2</h3>
-        <p>Content for region area 2</p>
+      <section aria-labelledby="Learn about screen readers">
+        <h3 id="region2">Landmark 2: Screen Readers</h3>
+        <p>
+          Content for landmark area 2: "Screen Readers". Sagittis id consectetur purus ut faucibus. Amet nisl purus in mollis nunc sed id semper. Urna condimentum mattis pellentesque id nibh tortor id aliquet. Habitasse platea dictumst quisque sagittis purus sit. Ipsum dolor sit amet consectetur adipiscing elit. Ut porttitor leo a diam sollicitudin tempor. Imperdiet nulla malesuada pellentesque elit eget gravida. Sit amet risus nullam eget felis eget. Leo a diam sollicitudin tempor id eu nisl. Neque gravida in fermentum et sollicitudin.
+        </p>
       </section>
     </main>
-    <aside> aside
-      <div role="form" id="form"> form
-        <div id="search" role="search">search</div>
-      </div>
+
+    <aside>
+      <h2>
+        Aside: Search
+      </h2>
+      <p>
+        Aside with related functions that are not central to the page.
+      </p>
+      <form>
+        <label class="search-label" for="search">
+          Search about recipes:
+        </label>
+        <input id="search" type="text" placeholder="Search about recipes">
+        <input class="button" type="button" value="Search">
+      </form>
     </aside>
-    <footer id="contentinfo" role="contentinfo">
-      footer#contentinfo
+    
+    <footer id="resources" role="contentinfo">
+      <h2>
+        Footer with important resources
+      </h2>
+      <ul>
+        <li>
+          <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/region.html#tabpanel2" target="_blank" rel="noopenner">WAI-ARIA landmark labels for section elements</a>
+        </li>
+        <li>
+          <a href="#">Resource #2</a>
+        </li>
+        <li>
+          <a href="#">Resource #3</a>
+        </li>
+      </ul>
     </footer>
   </div>
 </body>

@@ -2,6 +2,10 @@
 hw9-grid-implicit-explicit-placement/lindgren-grid/bonus.html
 hw9-grid-implicit-explicit-placement/lindgren-grid/assets/css/bonus-style.css
 hw10-grid-layout-sandbox/lindgren-grid
+grid
+grid-areas
+overlap-study
+media-query-basics
 
 # Other folders/files
 lectures
@@ -61,3 +65,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+.vscode/settings.json

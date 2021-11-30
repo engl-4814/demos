@@ -64,7 +64,7 @@
   }
 }
 
-/* Styles, just for fun */
+/* OTHER DEMO STYLES */
 
 *,*:before,*:after {
   box-sizing: border-box;
@@ -83,7 +83,7 @@ body {
 }
 
 .header h1,
-.header h2 {
+.header p {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.2em;
@@ -97,9 +97,13 @@ body {
   font-size: 2rem;
 }
 
-.header h2 {
+.header p {
   font-weight: normal;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+}
+
+.header a {
+  color: white;
 }
 
 @media screen and (min-width: 750px) {

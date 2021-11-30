@@ -1,0 +1,88 @@
+* { box-sizing: border-box; }
+
+img { width: 100%; }
+  
+html {
+  font-family: 'AdobeGaramondW01-Regula', georgia, serif;
+  font-size: 18px; 
+}
+
+body {
+  width: 80%;
+  margin: 8rem 15% 5rem 5%;
+  max-width: 800px; 
+}
+
+h1,h2 {
+  font-family: 'BauerBodoniW01-BoldDisp', georgia, serif;
+  color: #6e8e21;
+  margin: 0;
+  line-height: 1.1em; 
+}
+h1 { font-size: 5rem; margin-bottom: 75px;}
+h2 { font-size: 3.5rem; margin-top: 75px;}
+
+p, ul {
+  line-height: 1.75em; 
+}
+
+h1, h2, h3, p {
+  margin-left: 20vw; 
+}
+
+img {
+  width: 36vw;
+  float: left;
+  margin: 1em; 
+}
+
+img.tomato {
+  margin-bottom: 0;
+  shape-outside: circle(); 
+}
+
+
+/* FUNNELED TEXT WITH POLYGONS */
+
+#funnel {
+  margin: auto;
+  height: 48vh;
+}
+
+#funnel p {
+  text-align: center;
+  padding: 5px;
+}
+
+/* 
+  POLYGONS
+
+  - Require three or more pairs of values, which will draw at the very least a triangle inside its own bounding box.
+
+  - You need to define the block size, so a width and height need to be defined. Be sure to define the WxH akin to its parent container context.
+
+  - See Clippy path maker tool: https://bennettfeely.com/clippy/
+*/
+
+.left-ramp,
+.right-ramp {
+  width: 50%;
+  height: 52vh;
+  background-color: #6e8e21;
+}
+
+.left-ramp {
+  -webkit-shape-outside: polygon(45% 0, 100% 100%, 45% 100%);
+  shape-outside: polygon(45% 0, 100% 100%, 45% 100%);
+  float: left;
+  -webkit-clip-path: polygon(45% 0, 100% 100%, 45% 100%);
+  clip-path: polygon(45% 0, 100% 100%, 45% 100%);
+}
+
+.right-ramp {
+  -webkit-shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  shape-outside: polygon(100% 0, 100% 100%, 0 100%);
+  float: right;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}

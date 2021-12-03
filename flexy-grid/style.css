@@ -1,0 +1,47 @@
+
+body {
+  background: blueviolet;
+}
+
+h1 {
+  color: white;
+}
+
+/* img {
+  width: 100%;
+} */
+
+section > div {
+  color: white;
+  padding: 5px;
+}
+
+section {
+  display: flex;
+  gap: 10px;
+}
+
+section > div, .first-para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+section > div > img {
+  max-width: 800px;
+}
+
+@media screen and (max-width: 480px) {
+  section {
+    flex-direction:column;
+  }
+}
+@media screen and (max-width: 1000px) {
+  section > div {
+    padding: 0;
+    flex: 1 1 auto;
+  }
+}
+
+

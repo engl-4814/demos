@@ -1,0 +1,103 @@
+/* 
+  Solution modified from Paul O'Brien:
+  https://codepen.io/paulobrien/full/GxGpmY/
+*/
+
+h1 {
+  font-size: 3.5rem;
+}
+p {
+  margin: 25px
+}
+
+header, .flex-row {
+  max-width: 1280px;
+  margin: 50px auto;
+}
+
+/* Mobile-first */
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 25px;
+  background: #eee;
+}
+
+.flex-reverse { flex-direction: column-reverse; }
+
+.object-fit img { width: 100%; }
+
+/* Medium to Larger Screens */
+@media screen and (min-width: 600px) {
+  
+  .flex-row, .flex-reverse { flex-direction: row; }
+  
+  /* 
+    Flex width classes for items to grow up to its
+    basis of 60% / 30% respectively of the container's width.
+
+    Values for flex: [GROW FACTOR] [SHRINK FACTOR] [BASIS]
+
+    __GROW__ distributes available space between all flex siblings 
+    within the parent container:display:
+
+      - Flex Item W/H == (Parent container (W or H) / Total number of flex-grow values) * Flex item's flex-grow value
+      - Given a 1280px wide flex container with 2 flex items, where the first has a flex-grow of 3 and other a flex-grow of 1: 
+        - 960px == (1280px / 4) * 3
+        - 320px == (1280px / 1) * 1
+
+    __SHRINK__ is complicated! It enables you to define the rate that
+    flex items shrink relative to its siblings. This rate only occurs 
+    when the parent container has enough space to fit all flex items' 
+    default basis size. UFFDA! When set to zero, you simply overwrite the
+    default value of 1.
+
+    __BASIS__ is the default value before any other factor is applied to the item.
+
+  */
+  .flex__two-thirds { flex: 3 1; }
+  
+  .flex__one-third { flex: 1 1; }
+
+  .textbox {
+    font-size: 1.25em;
+    min-height: 100px;
+  }
+
+  .object-fit {
+    /* 1. 
+      Since this .object-fit contains the child img elements,
+      we can use relative position to then use top, left, 
+      and W&H dimensions to size and position it as we se fit.
+    */
+    position: relative;
+    /* Reset margin from mobile-first above */
+    margin: 0;
+  }
+
+  .object-fit img {
+    /* 2. Maximize flexible sizing */
+    min-width: 100%;
+    min-height: 100%;
+    /* 3. Center it */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* If object-fit supported, use this soluttion instead */
+  @supports (object-fit: cover) {
+    .object-fit img  {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transform: none;
+      object-fit: cover;
+    }
+  }
+  
+}

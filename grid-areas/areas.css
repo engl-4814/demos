@@ -32,4 +32,5 @@
 
 .container > * {
   border: 2px solid black;
+  min-height: 30vh;
 }

@@ -1,4 +1,8 @@
-
+/* CONTAINER */
+.container > * {
+  border: 2px solid black;
+  min-height: 30vh;
+}
 
 /* GRID */
 
@@ -28,9 +32,4 @@
       "nav_left content-2 sidebar_right"
       "nav_left content-3 sidebar_right"
       "footer footer sidebar_right"; 
-}
-
-.container > * {
-  border: 2px solid black;
-  min-height: 30vh;
 }

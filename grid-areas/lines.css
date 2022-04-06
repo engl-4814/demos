@@ -1,4 +1,8 @@
-
+/* CONTAINER */
+.container > * {
+  border: 2px solid black;
+  min-height: 30vh;
+}
 
 /* GRID */
 
@@ -15,9 +19,4 @@
 .header {
   grid-row: 1/2;
   grid-column: 1/-1;
-}
-
-.container > * {
-  border: 2px solid black;
-  min-height: 30vh;
 }

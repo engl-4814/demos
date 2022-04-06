@@ -1,0 +1,29 @@
+.cards {
+  display: flex;
+  align-content: center;
+}
+
+.cardWrapper {
+  overflow: hidden;
+}
+.cardWrapper:hover {
+  overflow: show;
+}
+
+.cardWrapper:last-child, .cardWrapper:hover {
+  overflow: visible;
+}
+
+.card {
+  width: 10em;
+  min-width: 10em;
+  border-radius: 0.5em;
+  border: solid #666 1px;
+  background-color: antiquewhite;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

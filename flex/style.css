@@ -1,0 +1,45 @@
+/*
+  Flex Grow, Shrink, and Basis
+  src: Kevin Powell https://www.youtube.com/watch?v=vQAvjof1oe4
+*/
+
+:root {
+  background-color:rgb(206, 143, 49);
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* GRID-LIKE */
+.flex-grid-like {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(98, 166, 193);
+}
+.flex-grid-like > * {
+  flex: 1 1 10em;
+  height: 300px;
+  border: 1px white solid;
+}
+
+/* OFFSET PROPORTIONS */
+.flex-offset-proportions {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(98, 166, 193);
+}
+
+.flex-offset-proportions > *:nth-child(1) {
+  flex: 1 1 60%;
+  min-width: 200px;
+  height: 200px;
+  border: 1px white solid;
+}
+.flex-offset-proportions > *:nth-child(2) {
+  flex: 1 1 39%;
+  height: 200px;
+  border: 1px white solid;
+}

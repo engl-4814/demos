@@ -1,0 +1,13 @@
+main {
+  display: grid;
+  grid-template-columns: 50px repeat(3, 1fr) 100px;
+}
+
+main > div {
+  border:chocolate solid 5px;
+  height: 50px;
+}
+
+.big_chocolate {
+  grid-column: 3 / 5;
+}

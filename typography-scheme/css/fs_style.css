@@ -2,30 +2,23 @@
 @import url(https://fonts.googleapis.com/css?family=Merriweather:200,400,700|Open+Sans:400italic,700italic,400,700|Slabo+27px:400);
 
 /* 
-  Change the default font size
-  below. What happened, and why?
+  1. GENERAL
 */
 html {
-  font-size: 16px; /*Default size*/
+  font-size: 18px;
 }
 
-/* 
-  Note the rem value on the sizing.
-  It's a 'root element' value, so it
-  is a value computed against the
-  value defined in the root element.
-
-  it's a great way to build a scheme,
-  i.e., a set of rules, that coordinate
-  a ensembled design written in one
-  place in your code.
-*/
 body {
-  background-color: #fff;
+  background-color: aquamarine;
   color: black;
   line-height: 1.5;
 }
-/* MAIN COPY SIZING */
+
+/* 
+  2. TYPOGRAPHY
+*/
+
+/* Font Sizing */
 body { font-size: 1.1rem; }
 h1 { font-size: 2.25rem; } 
 h2 { font-size: 1.5rem; } 
@@ -33,21 +26,36 @@ h3 { font-size: 1.25rem; }
 h4 { font-size: 1.25rem; font-style: italic; }
 blockquote { font-size: 1.125rem; }
 
-/* MAIN FONT FAMILIES */
+/* Font Families */
 p  { font-family: Open Sans; }
-h1,h2,h3 { 
-  font-family: Merriweather;
-}
-blockquote {
-  font-family: Merriweather; 
-}
+h1,h2,h3 { font-family: Merriweather; }
+blockquote { font-family: Merriweather; }
 
-/* Heading Styles */
+/* Headings */
 h1 {
   margin-bottom: 35px;
 }
 
-/* .post COPY STYLES */
+/* 
+  3. ARTICLE
+*/
+
+/* Posts */
+
+.post {
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+  border: #19c78c solid 1px;
+  box-shadow: 7px 10px 5px 0px wheat;
+}
+
+/* paragraphs */
+.post p {
+  padding: 10px 0px 10px 40px;
+}
+
+/* blockquotes */
 .post blockquote {
   /* 
    Note the CSS specificity @ work
@@ -68,6 +76,7 @@ h1 {
   font-size: 2rem;
 }
 
+/* first letter */
 .post p:first-of-type:first-letter {
   font-family: Merriweather;
   font-size: 2.75rem;
@@ -78,7 +87,4 @@ h1 {
 .post p:first-of-type:first-line {
   margin-top: 20px;
   line-height: 1;
-}
-.post p {
-  padding: 10px 0px 10px 40px;
 }

@@ -70,7 +70,7 @@ footer            {grid-area: footer;}
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 40ch 40ch;
     grid-template-rows: repeat(7, 1fr);
-    gap: 1em;
+    gap: 5em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
       "nav pr1 pr1 aside aside"

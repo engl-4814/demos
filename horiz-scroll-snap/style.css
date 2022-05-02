@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Fredoka+One&display=swap');
+
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: lightyellow;
+}
+
+
+/* Fonts */
+
+h1,
+h2 {
+  font-family: 'Fredoka One', cursive
+}
+
+h1 {
+  font-size: 3rem
+}
+
+h2 {
+  font-size: 2.25rem
+}
+
+small {
+  font-size: 1.15rem
+}
+
+p {
+  font-size: 1.35rem;
+  font-family: 'Baloo 2', cursive;
+  margin: 3em 0;
+}
+
+
+/* Slider Component */
+
+.slider-container {
+  padding: 24px;
+}
+
+
+/* 
+	How? 
+	1. Apply a 'scroll-snap-type'
+		on a parent container with children
+		items that you want to inherit its
+		features. This define the container
+    as a particular "scroll container"
+	2. Apply 'scroll-snap-align' to the
+		children.
+*/
+
+.slider {
+  display: flex;
+  /* 
+    Values: ('x' or 'y' axes) ('mandatory' or 'proximity')
+            type of snap action
+    Note: Proximity is assumed default value. 
+  */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  /* Handle how overflowing content is handled */
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider>div {
+  /* Using viewport values on dimensions for flexibility */
+  min-width: 100vw;
+  height: 50vh;
+  /* Border helps distinguish elements */
+  border-right: 5px solid white;
+  /* BG defaults to color, if img breaks */
+  background: purple;
+  /* Specify which part of element to snap */
+  /* Values: start, center, or end */
+  scroll-snap-align: start;
+}
+
+.slider h2 {
+  padding: 10px;
+  background: yellow;
+  opacity: 0.8;
+}
+
+
+/* Specific Slides */
+
+
+/* 
+  Note how I am using background images.
+  This is an a11y concern, if the images are
+  more than decorative in function. In my 
+  case, they are content important to the page,
+  so note how I use role="img" and an aria-label
+  on the div where it is applied. 
+*/
+
+#slide_1 {
+  background: url(https://media1.giphy.com/media/8vQSQ3cNXuDGo/giphy.gif);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+#slide_2 {
+  background: url(https://media3.giphy.com/media/jpbnoe3UIa8TU8LM13/giphy.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#slide_3 {
+  background: url(https://media2.giphy.com/media/yFQ0ywscgobJK/giphy.gif);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+#slide_4 {
+  background: url(https://media2.giphy.com/media/ASvQ3A2Q7blzq/giphy.gif);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+#slide_5 {
+  background: url(https://media0.giphy.com/media/kgfJvj2GvcEJG/giphy.gif);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+
+/* Slide 6 need extra features, cause it's *extra* */
+
+#slide_6 {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+#slide_6>div {
+  height: 0;
+  padding-bottom: 75%;
+  position: relative;
+  width: 100%
+}
+
+#slide_6 iframe {
+  padding: 0;
+  margin: 0;
+  left: -16px;
+  position: absolute;
+  top: 0;
+  width: 97vw;
+  height: 50vh;
+}

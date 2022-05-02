@@ -66,3 +66,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 .vscode/settings.json
+rules-of-thumb/rot.md

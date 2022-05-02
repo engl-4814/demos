@@ -36,6 +36,8 @@ img {
   margin: 1em; 
 }
 
+/* CIRCLE - Tomato */
+
 img.tomato {
   margin-bottom: 0;
   shape-outside: circle(); 

@@ -1,6 +1,5 @@
 /* 
-  Solution modified from Paul O'Brien:
-  https://codepen.io/paulobrien/full/GxGpmY/
+  GENERAL
 */
 
 h1 {
@@ -10,12 +9,21 @@ p {
   margin: 25px
 }
 
+/* Images */
+
+.object-fit img { width: 100%; }
+
+/* HEADER */
+
 header, .flex-row {
   max-width: 1280px;
   margin: 50px auto;
 }
 
-/* Mobile-first */
+
+/* FLEX SECTIONS */
+
+/* Mobile-First */
 
 .flex-row {
   display: flex;
@@ -26,8 +34,6 @@ header, .flex-row {
 }
 
 .flex-reverse { flex-direction: column-reverse; }
-
-.object-fit img { width: 100%; }
 
 /* Medium to Larger Screens */
 @media screen and (min-width: 600px) {
@@ -55,49 +61,33 @@ header, .flex-row {
     default value of 1.
 
     __BASIS__ is the default value before any other factor is applied to the item.
+    In this case, a minimum base width of
+    200px is applied to provide a baseline
+    width for each flex item to grow and shrink.
 
   */
-  .flex__two-thirds { flex: 3 1; }
+  .flex__two-thirds { flex: 3 1 200px; }
   
-  .flex__one-third { flex: 1 1; }
+  .flex__one-third { flex: 1 1 200px; }
 
   .textbox {
     font-size: 1.25em;
     min-height: 100px;
   }
 
-  .object-fit {
-    /* 1. 
-      Since this .object-fit contains the child img elements,
-      we can use relative position to then use top, left, 
-      and W&H dimensions to size and position it as we se fit.
-    */
-    position: relative;
-    /* Reset margin from mobile-first above */
-    margin: 0;
-  }
-
   .object-fit img {
-    /* 2. Maximize flexible sizing */
+    /* Maximize flexible sizing */
     min-width: 100%;
     min-height: 100%;
-    /* 3. Center it */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   
-  /* If object-fit supported, use this soluttion instead */
+  /* If object-fit supported, use this solution instead */
   @supports (object-fit: cover) {
     .object-fit img  {
-      position: absolute;
-      left: 0;
-      top: 0;
       height: 100%;
       width: 100%;
       transform: none;
       object-fit: cover;
     }
   }
-  
 }

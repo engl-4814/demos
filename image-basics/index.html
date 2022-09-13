@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
   <title>Home - Kittens'R'Us</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
@@ -24,7 +26,7 @@
       <div id="img__basics">
         <h3>The Basics</h3>
         <p>
-          Below, use one of your image files to render an image with the src, width, height, and alt attributes.
+          Below, I use one of my image files to render an image with the <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes.
         </p>
 
         <img src="images/cute-kittens-480.jpg" 
@@ -36,7 +38,18 @@
       <div id="img__srcset_and_sizes">
         <h3>Using srcset &amp; sizes</h3>
         <p>
-          Below, practice using the your set of 3 images by using the srcset and sizes attributes in the img element. Use the w (width) value for the srcset. Use the max-width attribute with the px (pixel) value for the sizes.
+          In the <code>img</code> element below, I use a set of the same 3 images, but differently sized, by using the <code>srcset</code> and <code>sizes</code> attributes. Use the:
+        </p>
+        <ul>
+          <li>
+            <code>w</code> (width) value for the <code>srcset</code>, and
+          </li>
+          <li>
+            <code>max-width</code> attribute with the <code>px</code> (pixel) value for the <code>sizes</code>.
+          </li>
+        </ul>
+        <p>
+          Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your code editor.
         </p>
         <!-- 
           3 SRCSET Values and Syntax
@@ -70,7 +83,7 @@
 
       <h2>Kittens in the <code>&lt;picture&gt;</code> element</h2>
       <p>
-        Below, practice creating a picture element that:
+        Below, I use the newer <code>picture</code> element that uses some simpler and more readable syntax:
       </p>
       <ol>
         <li>

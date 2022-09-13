@@ -15,6 +15,8 @@
     </h1>
   </header>
   <main>
+
+    <!-- IMG element: Basics + srcset & sizes attributes -->
     <section id="img">
 
       <h2>Kittens in the <code>&lt;img&gt;</code> element</h2>
@@ -27,7 +29,7 @@
 
         <img src="images/cute-kittens-480.jpg" 
              width="480px" height="267px"
-             alt="Five cute kittens organized in a row" />
+             alt="Five cute kittens set in a row on some green grass" />
       
       </div>
 
@@ -49,7 +51,7 @@
                     (max-width: 960px) 480px,
                     (max-width: 1440px) 960px,
                     1440px"
-             alt="Five cute kittens organized in a row, again!"   
+             alt="Five cute kittens set in a row on some green grass"   
         />
         <!-- 
           3 SIZES Attributes
@@ -63,6 +65,7 @@
 
     </section>
 
+    <!-- The new PICTURE element! -->
     <section id="picture__source">
 
       <h2>Kittens in the <code>&lt;picture&gt;</code> element</h2>
@@ -82,10 +85,19 @@
       </ol>
       <picture>
 
-        <!-- <source> elements use media and srcset attributes -->
+        <!--
+          <source> elements use media and srcset attributes
+          
+          In this case, the cropped version is displayed
+          if the viewport is __student_answer_here__.
+        -->
         <source media="(max-width: 480px)" 
-                srcset="images/cute-kittens-135_cropped.jpg">
+                srcset="images/cute-kittens-135-cropped.jpg">
         
+        <!--
+          In this case, the full 960px wide version is 
+          displayed if the viewport is __student_answer_here__.
+        -->
         <source media="(min-width: 960px)" 
                 srcset="images/cute-kittens-960.jpg">
 

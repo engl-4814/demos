@@ -4,3 +4,10 @@ h2      {font-size: 2.5rem;}
 h3      {font-size: 2rem;font-style: italic;}
 p,ol,ul {font-size: 1.25rem;}
 code    {font-size: 1.5rem;}
+
+/* .note */
+.note {
+  background-color: lightgray;
+  padding: 1.5em;
+  max-width: 650px;
+}

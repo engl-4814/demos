@@ -9,5 +9,6 @@ code    {font-size: 1.5rem;}
 .note {
   background-color: lightgray;
   padding: 1.5em;
+  margin-left: 1em;
   max-width: 650px;
 }

@@ -6,15 +6,10 @@ p,ol,ul {font-size: 1.25rem;}
 pre,code    {font-size: 1.5rem;}
 
 /* .note */
-.note {
-  background-color: lightgray;
-  padding: 1.5em;
-  margin-left: 1em;
-  max-width: 650px;
-}
-pre {
+pre,.note {
   background-color: lightgray;
   padding: 1.5em;
   margin-left: 1em;
   max-width: fit-content;
+  word-wrap: break-word;
 }

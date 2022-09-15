@@ -24,6 +24,7 @@
 
       <h2>Kittens in the <code>&lt;img&gt;</code> element</h2>
 
+      <!-- BASIC IMAGE -->
       <div id="img__basics">
         <h3>The Basics</h3>
         <p>
@@ -38,6 +39,7 @@
       
       </div>
 
+      <!-- IMAGE WITH SRCST & SIZES -->
       <div id="img__srcset_and_sizes">
         <h3>Using srcset &amp; sizes</h3>
         <p>
@@ -48,9 +50,25 @@
             <code>w</code> (width) value for the <code>srcset</code>, and
           </li>
           <li>
-            <code>max-width</code> attribute with the <code>px</code> (pixel) value for the <code>sizes</code>.
+            In <code>sizes</code>: 
+            <ol>
+              <li>
+                Within parantheses, the <code>max-width</code> or <code>min-width</code> query attribute that uses the length value, such as <code>px</code> (pixel) in its query.
+              <li>
+                After the paranthentical query, add a length value, such as a <code>px</code> value, for the image to be, when the condition has been met.
+            </ol>
           </li>
         </ul>
+        <pre>&lt;img srcset="images/cute-kittens-480.jpg 480w,
+          images/cute-kittens-960.jpg 960w,
+          images/cute-kittens-1440.png 1440w"
+  sizes="(max-width: 480px) 320px,
+         (max-width: 960px) 480px,
+         (max-width: 1440px) 960px,
+         1440px"
+  alt="Five cute kittens set in a row on some green grass"   
+/&gt;
+        </pre>
         <p>
           Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your code editor.
         </p>
@@ -99,6 +117,16 @@
           but the <code>&lt;picture&gt;</code> uses the <code>&lt;source&gt;</code> element to tell the browser to otherwise use the cropped version of your medium-sized file.
         </li>
       </ol>
+      <pre>&lt;picture&gt;
+  &lt;source media="(max-width: 480px)" 
+          srcset="images/cute-kittens-135-cropped.jpg"&gt;
+  &lt;source media="(min-width: 960px)" 
+          srcset="images/cute-kittens-960.jpg"&gt;
+  
+  &lt;img src="images/cute-kittens-480.jpg"
+        alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" /&gt;
+&lt;/picture>
+      </pre>
       <picture>
 
         <!--

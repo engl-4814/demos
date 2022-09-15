@@ -3,7 +3,7 @@ h1      {font-size: 3rem;}
 h2      {font-size: 2.5rem;}
 h3      {font-size: 2rem;font-style: italic;}
 p,ol,ul {font-size: 1.25rem;}
-code    {font-size: 1.5rem;}
+pre,code    {font-size: 1.5rem;}
 
 /* .note */
 .note {
@@ -11,4 +11,10 @@ code    {font-size: 1.5rem;}
   padding: 1.5em;
   margin-left: 1em;
   max-width: 650px;
+}
+pre {
+  background-color: lightgray;
+  padding: 1.5em;
+  margin-left: 1em;
+  max-width: fit-content;
 }

@@ -42,11 +42,11 @@ footer#contentinfo {background:#ffb6c1;}
 
 /* Skip Link */
 a.skip-to-link {
-  position: absolute;
+  /* position: absolute;
   left: -999px;
   width: 1px;
   height: 1px;
-  top: auto;
+  top: auto; */
 }
 a.skip-to-link:focus {
   color: black;

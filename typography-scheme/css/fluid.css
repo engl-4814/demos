@@ -1,0 +1,74 @@
+/* Fonts from https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css?family=Oswald|PT+Sans');
+
+html {
+  font-size: 18px;
+  background-color: #f2a44d;
+  color: #03261a;
+}
+
+/* Font Families */
+h1,h2,h3,h4,h5,h6 { font-family: 'Oswald', sans-serif; }
+p { font-family: 'PT Sans', sans-serif; }
+
+/* 
+  Using rem values 
+    > Simple, but not flexible
+*/
+
+/* h1 { font-size: 3.5rem; }
+h2 { font-size: 2rem; }
+p { font-size: 1rem; } */
+
+/* 
+  Using vw values
+    > Flexible, but difficult to control
+*/
+
+/* h1 { font-size: 5vw; }
+h2 { font-size: 3.5vw; }
+p { font-size: 1.5vw; } */
+
+/* 
+  Flexible typography using calc() + vw
+  Formula: 
+    calc(
+      [minimum size] + ([maximum size] - [minimum size]) 
+        * (
+            (100vw - [minimum viewport width]) 
+            / ([maximum viewport width] - [minimum viewport width])
+          )
+    )
+*/
+body {
+  font-size: 16px;
+  font-size: calc(16px + (18-16)*(100vw - 80vw)/(1200 - 320));
+}
+
+/* MAIN */
+main {
+  padding: 2rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* HR - horizontal rule classes */
+
+.scoring {
+  background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, currentcolor 8px, currentcolor 10px);
+  padding: 0px;
+  aspect-ratio: 6 / 1;
+  border: 0px;
+  display: block;
+  color: inherit;
+}
+
+.thicker {
+  background-color: currentcolor;
+  padding: 0px;
+  height: 4px;
+  border: 0px;
+  display: block;
+  color: inherit;
+}

@@ -58,8 +58,7 @@ li {
 main {
   padding: 2rem;
   line-height: 1.5;
-  max-width: 500px;
-  margin: auto;
+  margin: 1em;
 }
 
 /* HR - horizontal rule classes */

@@ -1,6 +1,43 @@
-@import "nav.css";
-/* Fonts from https://fonts.google.com/ */
+/* IMPORTS */
+/*
+  Remember that the file formats are the result of different "compression" algorithms. Newer font formats and their file size are more efficiently compressed without losing their lovely looks. BUT, not all browsers support newer file formats. Consider the following:
+
+  ** EOT, Embedded OpenType: Compatible with Internet Explorer 6+.
+
+  ** WOFF, Web Open Font Format: Compatible with Firefox 3.6+, Safari 5.1+, Chrome 5+, Internet Explorer 9+, Opera 11.5+, Android 4.4+, and iOS Safari 5.1+.
+
+  ** WOFF2 — Next-gen WOFF that's ~20–30% reduced in file size. Compatible with Firefox 3.6+, Safari 5.1+, Chrome 36+, Edge 14+, Opera 23+, Android 67+, and iOS Safari 10+ (Mac OS Sierra and up only). 
+  
+  Check out canisuse.com for more details, when making your decisions. Here's the page for .woff2: https://caniuse.com/woff2
+*/
 @import url(https://fonts.googleapis.com/css?family=Merriweather:200,400,700|Open+Sans:400italic,700italic,400,700|Slabo+27px:400);
+@font-face {
+  font-family: 'Atkinson';
+  src: url('../assets/fonts/Atkinson/EOT/Atkinson-Hyperlegible-Regular-102.eot') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('Roboto-LightItalic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('Roboto-Bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/*
+  TOC
+  1. GENERAL
+  2. TYPOGRAPHY
+  3. ARTICLE
+*/
 
 /* 
   1. GENERAL
@@ -44,8 +81,7 @@ h1 {
 /* Posts */
 
 .post {
-  max-width: 600px;
-  margin: auto;
+  margin: 0.25em;
   padding: 1em;
   border: #19c78c solid 1px;
   box-shadow: 7px 10px 5px 0px wheat;

@@ -2,11 +2,24 @@
 /* Fonts from https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css?family=Oswald|PT+Sans');
 
+/*
+  TOC
+  1. GENERAL
+  2. TYPOGRAPHY
+  3. EFFECTS
+  4. MAIN
+*/
+
+
+/* GENERAL */
+
 html {
   font-size: 18px;
   background-color: #f2a44d;
   color: #03261a;
 }
+
+/* TYPOGRAPHY */
 
 /* Font Families */
 h1,h2,h3,h4,h5,h6 { font-family: 'Oswald', sans-serif; }
@@ -54,22 +67,31 @@ li {
   list-style-type: none;
 }
 
-/* MAIN */
-main {
-  padding: 2rem;
-  line-height: 1.5;
-  margin: 1em;
+/* EFFECTS */
+
+/* Image Effects */
+
+
+/* circle shape floats */
+.float-left-cir { float: left; }
+.float-right-cir { float: right; }
+
+.float-left-cir,
+.float-right-cir {
+  max-width: 100%;
+  margin-right: 25px;
+  border-radius: 50%;
+  shape-outside: circle();
 }
 
-/* HR - horizontal rule classes */
-
+/* HR - Horizontal Rule Effects */
 .scoring {
   background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, currentcolor 8px, currentcolor 10px);
   padding: 0px;
   aspect-ratio: 6 / 1;
   border: 0px;
   display: block;
-  color: inherit;
+  color: #bf6d0f;
 }
 
 .thicker {
@@ -79,4 +101,11 @@ main {
   border: 0px;
   display: block;
   color: inherit;
+}
+
+/* MAIN */
+main {
+  padding: 2rem;
+  line-height: 1.5;
+  margin: 1em;
 }

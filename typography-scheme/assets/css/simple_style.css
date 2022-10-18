@@ -2,7 +2,6 @@
 /* Import Fonts from https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css?family=Monoton|Metrophobic|Roboto');
 
-
 /* 
   1. GENERAL
 */
@@ -30,7 +29,7 @@ p {
 
 /* 3. MAIN */
 main {
-  width: 55%;
+  /* width: 55%; */
   padding: 2em;
 }
 

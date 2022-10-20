@@ -19,46 +19,6 @@ html {
   color: #03261a;
 }
 
-/* TYPOGRAPHY */
-
-/* Font Families */
-h1,h2,h3,h4,h5,h6 { font-family: 'Oswald', sans-serif; }
-p { font-family: 'PT Sans', sans-serif; }
-
-/* 
-  Using rem values 
-    > Simple, but not flexible
-*/
-
-/* h1 { font-size: 3.5rem; }
-h2 { font-size: 2rem; }
-p { font-size: 1rem; } */
-
-/* 
-  Using vw values
-    > Flexible, but difficult to control
-*/
-
-/* h1 { font-size: 5vw; }
-h2 { font-size: 3.5vw; }
-p { font-size: 1.5vw; } */
-
-/* 
-  Flexible typography using calc() + vw
-  Formula: 
-    calc(
-      [minimum size] + ([maximum size] - [minimum size]) 
-        * (
-            (100vw - [minimum viewport width]) 
-            / ([maximum viewport width] - [minimum viewport width])
-          )
-    )
-*/
-body {
-  font-size: 16px;
-  font-size: calc(16px + (18-16)*(100vw - 80vw)/(1200 - 320));
-}
-
 ul {
   margin: 0; padding: 0;
   list-style-type: none;
@@ -66,6 +26,74 @@ ul {
 li {
   list-style-type: none;
 }
+
+/* TYPOGRAPHY */
+
+/* Font Families */
+h1,h2,h3,h4,h5,h6 { font-family: 'Oswald', sans-serif; }
+p { font-family: 'PT Sans', sans-serif; }
+
+
+
+/*============================
+  Using rem values 
+    > Simple, but not flexible
+  =========================*/
+
+/* h1 { font-size: 3.5rem; }
+h2 { font-size: 2rem; }
+p { font-size: 1rem; } */
+
+
+
+/*======================================
+  Using vw values
+    > Flexible, but difficult to control
+  ====================================*/
+
+/* h1 { font-size: 5vw; }
+h2 { font-size: 3.5vw; }
+p { font-size: 1.5vw; } */
+
+
+
+/*======================================
+  Flexible typography using calc() + vw
+  
+  Formula: 
+  
+  calc(
+    [minimum size] + ([maximum size] - [minimum size]) 
+      * (
+          (100vw - [minimum viewport width]) 
+          / ([maximum viewport width] - [minimum viewport width])
+        )
+  )
+  ===================================*/
+
+/* body {
+  font-size: 16px;
+  font-size: calc(16px + (18-16)*(100vw - 80vw)/(1200 - 320));
+} */
+
+
+
+/*=================================
+  Flexible typography using clamp()
+  https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+
+  Parameters: clamp(min, val, max)
+
+  minimum == smallest size possible
+  value   == the preferred size
+  maximum == largest size possible
+  ===============================*/
+
+body  { font-size: clamp(18px, 5vw, 28px); }
+h1    { font-size: clamp(36px, 10vw, 62px) }
+h2    { font-size: clamp(30px, 10vw, 48px); }
+
+
 
 /* EFFECTS */
 

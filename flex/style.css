@@ -1,45 +1,110 @@
 /*
-  Flex Grow, Shrink, and Basis
-  src: Kevin Powell https://www.youtube.com/watch?v=vQAvjof1oe4
+  Flex Demos
+  1. Basic
+  2 & 3 use Flex Grow, Shrink, and Basis
 */
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+
+/*=====
+GENERAL
+=====*/
 
 :root {
-  background-color:rgb(206, 143, 49);
+  --laser-lemon: #e6eb3f;
+  --violet: #705c90;
+  --watermelon: #eb7878;
+  --custard: #fdffc6;
+}
+
+body {
+  background-color: var(--laser-lemon);
+  color: var(--violet);
 }
 
 section {
   max-width: 1200px;
-  margin: auto;
+  margin: 50px auto;
+  padding: 25px;
+  box-shadow: 3px 3px 2px 0px #705c92;
 }
 
+section:nth-child(odd) {
+  background-color: var(--custard);
+  color: var(--violet);
+}
 
-/* GRID-LIKE */
-.flex-grid-like {
+h1,h2 {
+  font-family: Monoton;
+}
+h1 { font-size: 4rem; margin: 2.75em 0; }
+h2 { font-size: 2.5rem; margin: 1em 0; }
+
+/*====
+SHARED
+====*/
+
+.basic,
+.grow-shrink-wrap,
+.flex-offset-proportions {
+  background-color: var(--watermelon);
+  text-align:center;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 50px;
+}
+
+.basic > *,
+.grow-shrink-wrap > *,
+.flex-offset-proportions > * {
+  border: 1px whitesmoke solid;
+}
+
+/*===========
+BASIC FLEXBOX
+===========*/
+
+.basic {
+  display: flex;
+}
+
+/* Children Boxes */
+.box {
+  /* Other styles */
+  padding: 10px;
+}
+
+/*=======
+GRID-LIKE
+=======*/
+
+.grow-shrink-wrap {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(98, 166, 193);
 }
-.flex-grid-like > * {
-  flex: 1 1 10em;
-  height: 300px;
-  border: 1px white solid;
+.grow-shrink-wrap > * {
+  flex: 1 1 5em;
+  /* height only for empty elements in the demo */
+  height: 200px;
 }
 
-/* OFFSET PROPORTIONS */
+/*================
+OFFSET PROPORTIONS
+================*/
+
 .flex-offset-proportions {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(98, 166, 193);
 }
 
 .flex-offset-proportions > *:nth-child(1) {
   flex: 1 1 60%;
+  /* dimensions only for empty elements in the demo */
   min-width: 200px;
   height: 200px;
-  border: 1px white solid;
 }
 .flex-offset-proportions > *:nth-child(2) {
   flex: 1 1 39%;
+  /* height only for empty elements in the demo */
   height: 200px;
-  border: 1px white solid;
 }

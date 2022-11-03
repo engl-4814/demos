@@ -1,19 +1,19 @@
 /* CONTAINER */
 .container > * {
   border: 2px solid black;
-  min-height: 30vh;
+  padding: 1.75em;
 }
 
 /* GRID */
 
 /* Define grid area keywords per class */
-.header { grid-area: header; }
-.nav_left { grid-area: nav_left; }
+.header        { grid-area: header; }
+.nav_left      { grid-area: nav_left; }
 .sidebar_right { grid-area: sidebar_right; }
-.content-1 { grid-area: content-1; }
-.content-2 { grid-area: content-2; }
-.content-3 { grid-area: content-3; }
-.footer { grid-area: footer; }
+.content-1     { grid-area: content-1; }
+.content-2     { grid-area: content-2; }
+.content-3     { grid-area: content-3; }
+.footer        { grid-area: footer; }
 
 /* 
   - Define grid
@@ -27,9 +27,9 @@
   grid-template-rows: 50vh 1fr 1fr 1fr 1fr 100px;
   grid-gap: 1rem;
   grid-template-areas:
-      "header header header"
-      "nav_left content-1 sidebar_right"
-      "nav_left content-2 sidebar_right"
-      "nav_left content-3 sidebar_right"
-      "footer footer sidebar_right"; 
+    "header header header"
+    "nav_left content-1 sidebar_right"
+    "nav_left content-2 sidebar_right"
+    "nav_left content-3 sidebar_right"
+    "footer footer footer"; 
 }

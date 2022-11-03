@@ -6,7 +6,7 @@
 
 /* GRID */
 
-/* Define grid area keywords per class */
+/* Define grid area keywords */
 .header        { grid-area: header; }
 .nav_left      { grid-area: nav_left; }
 .sidebar_right { grid-area: sidebar_right; }

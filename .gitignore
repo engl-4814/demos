@@ -67,3 +67,6 @@ $RECYCLE.BIN/
 *.lnk
 .vscode/settings.json
 rules-of-thumb/rot.md
+
+# Other files
+grid-areas/breaking-title.html

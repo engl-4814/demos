@@ -2,7 +2,9 @@
 .container > * {
   border: 2px solid black;
   padding: 1.75em;
+  /* margin-bottom: 5vh; */
 }
+/* .header {padding: 0;position: relative;} */
 
 /* GRID */
 

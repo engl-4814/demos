@@ -1,0 +1,41 @@
+/* CONTAINER */
+.container > * {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 1.75em;
+}
+
+/* GRID */
+
+/* Define grid area keywords */
+header     { grid-area: header; }
+nav        { grid-area: nav_left; }
+.c1 { grid-area: c1; }
+.c2 { grid-area: c2; }
+.c3 { grid-area: c3; }
+.c4 { grid-area: c4; }
+.c5 { grid-area: c5; }
+
+/* 
+  - Define grid
+  - Define template sizing for cols & rows
+  - Use area keywords to place items
+    along row/col tracks
+*/
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+  "header header header header header header header header header header header header"
+  "nav_left nav_left nav_left c1 c1 c1 c1 c1 c2 c2 c2 c2"
+  "nav_left nav_left nav_left c3 c3 c3 c4 c4 c4 c5 c5 c5"
+} */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: 
+  "header header header header header header header"
+  "nav_left c1 c1 c1 c2 c2 c2"
+  "nav_left c3 c3 c4 c4 c5 c5"
+}

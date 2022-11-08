@@ -91,7 +91,6 @@ header, .flex-row {
     .object-fit img  {
       height: 100%;
       width: 100%;
-      transform: none;
       object-fit: cover;
     }
   }

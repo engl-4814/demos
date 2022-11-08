@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2ebe9;
+}
+
+header {
+  font-size: 3rem;
+  font-weight: 900;
+  padding: 2rem;
+}
+
+/* TYPOGRAPHY */
+
+h1,h2 { font-family: 'Coiny', cursive; }
+h2 {
+  font-size: clamp(18px, 1.75rem, 2rem);
+  margin: 0.1rem 0 0.25rem 0;
+}
+p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* LAYOUT */
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+/* FIGURES */
+
+figure {
+  color: antiquewhite;
+  padding: 0;
+  margin: 0;
+}
+
+figcaption {
+  padding: 1em 0 0 1.5em;
+  font-weight: 600;
+  /* Use z-layers to ensure figcaptions are in front of the image */
+  position: relative;
+  z-index: 1;
+}
+
+
+/* :HOVER CARD COMPONENT */
+
+/* Define hover state values */
+.hover-card-container {
+  --hover: 0;
+}
+.hover-card-container:hover {
+  --hover: 1;
+}
+
+.hover-card-container figure > div {
+  /* define vars */
+  --bg: hsl(0 80% calc(90% - (var(--hover) * 10%)));
+  --accent: hsl(0deg 48% 42%);
+  /* basic box modeling */
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  aspect-ratio: 8 / 6;
+  /* default animated transition state */
+  transition: background 0.2s;
+  background:
+    radial-gradient(circle at top left, var(--accent), transparent 100%),
+    var(--bg);
+}
+
+/* Creates a "pseudo" element after this div */
+.hover-card-container figure > div:after {
+  content: "";
+  position: absolute;
+  width: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  bottom: 0%;
+  left: 10%;
+  filter: blur(25px);
+  transform:
+    translateX(calc(var(--hover) * 15%))
+    scale(calc(1 + (var(--hover) * 0.2)));
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hover-card-container img {
+  position: absolute;
+  right: 2.5%;
+  bottom: 2.5%;
+  width: 60%;
+  transform:
+    translateX(calc(var(--hover) * -15%))
+    scale(calc(1 + (var(--hover) * 0.2)));
+  transition: transform 0.2s;
+}

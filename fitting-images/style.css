@@ -1,0 +1,23 @@
+
+/* max-width on parent for demo purposes */
+.object-fit {
+  max-width: 750px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+/* Object Fit Solution */
+.object-fit img {
+  /* Maximize flexible sizing */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* If object-fit supported, use this solution instead */
+@supports (object-fit: cover) {
+  .object-fit img  {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

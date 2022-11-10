@@ -5,11 +5,11 @@
   to nearly empty grid kids
 */
 main > * {
-  background: blueviolet;
+  background: rgb(226, 21, 82);
   font-size: clamp(1rem, 2rem, 2.5rem);
-  color: azure;
+  color: rgb(10, 10, 10);
   font-weight: bolder;
-  padding: 0.5em;
+  padding: 0.75em;
 }
 
 /* GRID */
@@ -31,10 +31,10 @@ footer            {grid-area: footer;}
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr2 pr2 pr2 pr2"
-      "aside aside aside aside aside"
+      "nav pr1 pr1 aside aside"
+      "nav pr1 pr1 aside aside"
+      "nav pr2 pr2 aside aside"
+      "nav pr2 pr2 aside aside aside"
       "footer footer footer footer footer"
       ;
   }

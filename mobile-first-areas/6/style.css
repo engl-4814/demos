@@ -4,10 +4,13 @@
   Basic styles & define dimensions
   to nearly empty grid kids
 */
+html {
+  background: #ad8e98;
+}
 main > * {
-  background: blueviolet;
+  background: #05142A;
   font-size: clamp(1rem, 2rem, 2.5rem);
-  color: azure;
+  color: #ad8e98;
   font-weight: bolder;
   padding: 0.5em;
 }
@@ -19,6 +22,7 @@ header            {grid-area: hdr;}
 nav               {grid-area: nav;}
 .first_priority   {grid-area: pr1;}
 .second_priority  {grid-area: pr2;}
+.third_priority   {grid-area: pr3;}
 aside             {grid-area: aside;}
 footer            {grid-area: footer;}
 
@@ -31,10 +35,11 @@ footer            {grid-area: footer;}
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr2 pr2 pr2 pr2"
-      "aside aside aside aside aside"
+      "aside pr1 pr1 pr1 pr1"
+      "aside pr1 pr1 pr1 pr1"
+      "aside pr2 pr2 pr2 pr2"
+      "aside pr3 pr3 pr3 pr3"
+      "nav nav nav nav nav"
       "footer footer footer footer footer"
       ;
   }
@@ -49,11 +54,12 @@ footer            {grid-area: footer;}
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr2 pr2 pr2 aside"
-      "nav pr2 pr2 pr2 aside"
+      "aside pr1 pr1 pr1 nav"
+      "aside pr1 pr1 pr1 nav"
+      "aside pr1 pr1 pr1 nav"
+      "aside pr2 pr2 pr2 nav"
+      "aside pr2 pr2 pr2 nav"
+      "aside pr3 pr3 pr3 nav"
       "footer footer footer footer footer"
       ;
   }
@@ -68,11 +74,12 @@ footer            {grid-area: footer;}
     gap: 5em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      ". nav pr1 aside ."
-      ". nav pr1 aside ."
-      ". nav pr1 aside ."
-      ". nav pr2 aside ."
-      ". nav pr2 aside ."
+      ". aside pr1 nav ."
+      ". aside pr1 nav ."
+      ". aside pr1 nav ."
+      ". aside pr2 nav ."
+      ". aside pr2 nav ."
+      ". aside pr3 nav ."
       "footer footer footer footer footer"
       ;
   }

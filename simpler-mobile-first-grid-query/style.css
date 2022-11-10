@@ -5,16 +5,11 @@
   to nearly empty grid kids
 */
 main > * {
-  min-height: 20vh;
   background: blueviolet;
-  font-size: 4rem;
+  font-size: clamp(1rem, 2rem, 2.5rem);
+  color: azure;
   font-weight: bolder;
   padding: 0.5em;
-}
-
-/* Header */
-header {
-  height: 50vh;
 }
 
 /* GRID */
@@ -28,7 +23,7 @@ aside             {grid-area: aside;}
 footer            {grid-area: footer;}
 
 /* Tablet/Medium-Sized Screens */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   main {
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 1fr 1fr;
@@ -46,7 +41,7 @@ footer            {grid-area: footer;}
 }
 
 /* Desktop/Larger-Sized Screens */
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   main {
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 1fr 40ch;
@@ -64,20 +59,20 @@ footer            {grid-area: footer;}
   }
 }
 
-/* HUGE Screens */
-@media screen and (min-width: 2560px) {
+/* XL Screens */
+@media screen and (min-width: 1980px) {
   main {
     display: grid;
-    grid-template-columns: 40ch 80ch 1fr 40ch 40ch;
+    grid-template-columns: 150px 40ch 1fr 40ch 150px;
     grid-template-rows: repeat(7, 1fr);
     gap: 5em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 aside aside"
-      "nav pr1 pr1 aside aside"
-      "nav pr1 pr1 aside aside"
-      "nav pr2 pr2 aside aside"
-      "nav pr2 pr2 aside aside"
+      ". nav pr1 aside ."
+      ". nav pr1 aside ."
+      ". nav pr1 aside ."
+      ". nav pr2 aside ."
+      ". nav pr2 aside ."
       "footer footer footer footer footer"
       ;
   }

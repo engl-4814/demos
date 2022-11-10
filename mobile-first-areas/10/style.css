@@ -5,11 +5,11 @@
   to nearly empty grid kids
 */
 main > * {
-  background: blueviolet;
+  background: rgb(226, 21, 82);
   font-size: clamp(1rem, 2rem, 2.5rem);
-  color: azure;
+  color: rgb(10, 10, 10);
   font-weight: bolder;
-  padding: 0.5em;
+  padding: 0.75em;
 }
 
 /* GRID */
@@ -19,6 +19,7 @@ header            {grid-area: hdr;}
 nav               {grid-area: nav;}
 .first_priority   {grid-area: pr1;}
 .second_priority  {grid-area: pr2;}
+.third_priority   {grid-area: pr3} 
 aside             {grid-area: aside;}
 footer            {grid-area: footer;}
 
@@ -26,15 +27,17 @@ footer            {grid-area: footer;}
 @media screen and (min-width: 768px) {
   main {
     display: grid;
-    grid-template-columns: 40ch 80ch 1fr 1fr 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 40ch 80ch 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr1 pr1 pr1 pr1"
-      "nav pr2 pr2 pr2 pr2"
-      "aside aside aside aside aside"
+      "nav pr1 pr1 aside aside"
+      "nav pr1 pr1 aside aside"
+      "nav pr2 pr2 aside aside"
+      "nav pr3 pr3 aside aside"
+      "nav pr3 pr3 aside aside"
+      "nav pr2 pr2 aside aside"
       "footer footer footer footer footer"
       ;
   }
@@ -49,11 +52,11 @@ footer            {grid-area: footer;}
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr1 pr1 pr1 aside"
-      "nav pr2 pr2 pr2 aside"
-      "nav pr2 pr2 pr2 aside"
+      "aside pr1 pr1 pr1 nav"
+      "aside pr1 pr1 pr1 nav"
+      "aside pr2 pr2 pr2 nav"
+      "aside pr3 pr3 pr3 nav"
+      "aside aside aside aside aside"
       "footer footer footer footer footer"
       ;
   }
@@ -73,6 +76,8 @@ footer            {grid-area: footer;}
       ". nav pr1 aside ."
       ". nav pr2 aside ."
       ". nav pr2 aside ."
+      ". nav pr3 aside ."
+      ". nav pr3 aside ."
       "footer footer footer footer footer"
       ;
   }

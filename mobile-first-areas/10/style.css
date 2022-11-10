@@ -49,7 +49,7 @@ footer            {grid-area: footer;}
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 1fr 40ch;
     grid-template-rows: repeat(9, 1fr);
-    gap: 1em;
+    gap: 2em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
       "hdr hdr hdr hdr hdr"

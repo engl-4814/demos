@@ -1,0 +1,51 @@
+
+body {
+  background: blueviolet;
+}
+
+h1 {
+  color: white;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+section > div {
+  color: white;
+  padding: 5px;
+}
+
+/* Mobile-First */
+.media {
+  float: left;
+  width: 55%;
+  margin-right: 25px;
+  border-radius: 50%;
+  shape-outside: circle();
+}
+.media > img {
+  border-radius: 50%;
+}
+
+/* Large */
+@media screen and (min-width: 1080px) {
+  section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .media {
+    padding: 0;
+    flex: 0 0.5 900px;
+    border-radius: 0;
+    shape-outside: none;
+  }
+  .media > img {
+    border-radius: 0;
+    }
+}
+
+

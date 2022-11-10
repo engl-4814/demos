@@ -28,9 +28,10 @@ footer            {grid-area: footer;}
   main {
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 1fr 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 1em;
     grid-template-areas:
+      "hdr hdr hdr hdr hdr"
       "hdr hdr hdr hdr hdr"
       "nav pr1 pr1 aside aside"
       "nav pr1 pr1 aside aside"
@@ -47,9 +48,10 @@ footer            {grid-area: footer;}
   main {
     display: grid;
     grid-template-columns: 40ch 80ch 1fr 1fr 40ch;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 1em;
     grid-template-areas:
+      "hdr hdr hdr hdr hdr"
       "hdr hdr hdr hdr hdr"
       "aside pr1 pr1 pr1 nav"
       "aside pr1 pr1 pr1 nav"
@@ -67,9 +69,10 @@ footer            {grid-area: footer;}
   main {
     display: grid;
     grid-template-columns: 150px 40ch 1fr 40ch 150px;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 5em;
     grid-template-areas:
+      "hdr hdr hdr hdr hdr"
       "hdr hdr hdr hdr hdr"
       ". nav pr1 aside ."
       ". nav pr1 aside ."

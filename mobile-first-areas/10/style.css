@@ -49,7 +49,7 @@ footer            {grid-area: footer;}
     gap: 1em;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      "aside nav pr1 pr1 pr1 nav"
+      "aside pr1 pr1 pr1 nav"
       "aside pr1 pr1 pr1 nav"
       "aside pr2 pr2 pr2 nav"
       "aside pr2 pr2 pr2 nav"

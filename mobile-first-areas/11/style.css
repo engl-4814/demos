@@ -86,13 +86,13 @@ footer            {grid-area: footer;}
     grid-template-rows: repeat(7, 1fr);
     gap: 5em;
     grid-template-areas:
-      "hdr hdr hdr hdr hdr hdr hdr"
-      ". nav pr1 pr1 pr1 pr1 aside"
-      ". nav pr1 pr1 pr1 pr1 aside"
-      ". nav pr1 pr1 pr1 pr1 aside"
-      ". nav pr2 pr2 pr2 pr2 aside"
-      ". nav pr2 pr2 pr2 pr2 aside"
-      "footer footer footer footer footer footer footer"
+      "hdr hdr hdr hdr hdr hdr hdr hdr"
+      ". nav pr1 pr1 pr1 pr1 aside ."
+      ". nav pr1 aside ."
+      ". nav pr1 aside ."
+      ". nav pr2 aside ."
+      ". nav pr2 aside ."
+      "footer footer footer footer footer"
       ;
   }
 }

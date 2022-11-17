@@ -7,7 +7,7 @@ html,body {
 }
 /* TYPOGRAPHY */
 
-h1,h2 { font-family: 'Bungee', cursive; }
+h1,h2,h3 { font-family: 'Bungee', cursive; }
 
 h1 {
   font-size: clamp(2em,14vw,25vw);
@@ -23,12 +23,16 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: clamp(1.5rem,2rem,3rem);
+  font-style: italic;
+}
+
 p {
   font-family: 'Sono', sans-serif;
   font-weight: 300;
   letter-spacing: -0.65mm;
   font-size: clamp(1.2rem, 1.5rem, 2rem);
-  columns: 2;
 }
 
 /* GRID AREAS */
@@ -65,8 +69,21 @@ p {
   ;
 }
 
-.checkered header {
-  height: 50vh;
+/* 
+  POSITIONING & Z-INDEX LAYERS
+
+  Position all content above the checker piece.
+
+  These elements are set as relative, so the absolute positioned checker piece image can be layered beneath this textual content. See how the image's z-index is set to 0, while all other elements are positioned as relative to it on z-index 1 above the checker piece image.
+*/
+h1,h1 > span,main {
+  position: relative;
+  z-index: 1;
+}
+
+.checker-piece {
+  position: fixed;
+  z-index: 0;
 }
 
 /* TITLE */
@@ -74,7 +91,6 @@ p {
 h1 {
   position: relative;
   background-color: black;
-  z-index: 1;
   padding: 20vh 0;
   margin: 0;
 }
@@ -87,7 +103,7 @@ h1 > span {
   /* Create flexible height and width to manage the large font sizing */
   height: 100%;
   width: 100%;
-  margin: 1rem 0 1rem 1rem;
+  margin: 1rem 0;
   
   /* Create checkerboard background */
   background-image: linear-gradient(135deg, black 25%, transparent 25%), linear-gradient(225deg, black 25%, transparent 25%), linear-gradient(45deg, black 25%, transparent 25%), linear-gradient(315deg, black 25%, #ffffff 25%);
@@ -97,10 +113,6 @@ h1 > span {
   -webkit-text-fill-color: transparent;
   /* clip the background to the text itself */
   -webkit-background-clip: text;
-
-  /* This element is set as relative, so the absolute positioned checker piece image can be layered beneath this textual content. See how the image's z-index is set to 0, while all other elements are positioned as relative to it on z-index 1 above the checker piece image. */
-  position: relative;
-  z-index: 1;
 }
 
 /* h1 refinements */
@@ -114,17 +126,15 @@ h1 span.red {
   -webkit-background-clip: text;
 }
 
-h1 span.c {
+/* h1 span.c {
   margin-left: -72px;
   -webkit-text-fill-color: #ff0000;
-}
+} */
 
-h1 > .checker-piece {
-  z-index: 0;
-  position: fixed;
-  top: 10px;
+.checker-piece {
+  top: clamp(40px, 80px, 90px);
   right: 5px;
-  width: 25vw;
+  width: clamp(25vw, 38vw, 45vw);
 }
 
 /* MAIN CONTENT AREA */
@@ -133,9 +143,22 @@ main {
   color: white;
   padding: 2rem;
   background-color: #ff4040;
-  /* position all content above the checker piece */
-  position: relative;
-  z-index: 1;
+}
+
+/* main images */
+.checkerboard {
+  width: 45vw;
+  /* Use https://tools.webdevpuneet.com/css-clip-path-generator/ to create polygon paths for cool custom clipping effects */
+  shape-outside: polygon(17% 0, 84% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(17% 0, 84% 0, 100% 100%, 0% 100%);
+  float:left;
+  margin-right: 1rem;
+}
+
+/* main sections */
+
+section.columns-2 > p {
+  columns: 2;
 }
 
 /* MEDIA QUERIES */
@@ -152,11 +175,6 @@ main {
       "c5 . c6 . c7 . c8"
     ;
   }
-  
-  h1 span.c {
-    margin-left: 0;
-    -webkit-text-fill-color: transparent;
-  }
 
   body {
     border-top: 1px solid black;
@@ -165,7 +183,6 @@ main {
 
   p {
     font-size: 1.25rem;
-    columns: 1;
   }
   
 }

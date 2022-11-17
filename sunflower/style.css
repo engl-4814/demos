@@ -16,6 +16,8 @@ header {
 
 section {
   padding: 0 1rem;
+  max-width: 750px;
+  margin: auto;
 }
 
 /* TYPOGRAPHY */

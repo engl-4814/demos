@@ -7,10 +7,13 @@ h1 {
   color: white;
 }
 
+/* Default Image Behavior */
 img {
   display: block;
   width: 100%;
 }
+
+/* General */
 
 section > div {
   color: white;

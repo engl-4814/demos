@@ -20,17 +20,29 @@ section > div {
 /* Mobile-First */
 .media {
   float: left;
-  width: 55%;
+  width: 150px;
+  height: 150px;
   margin-right: 25px;
   border-radius: 50%;
   shape-outside: circle();
 }
 .media > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
+/* Medium */
+@media screen and (min-width: 600px) {
+  .media {
+    width: 320px;
+    height: 320px;
+  }
+}
+
 /* Large */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 980px) {
   section {
     display: flex;
     gap: 10px;
@@ -45,7 +57,7 @@ section > div {
   }
   .media > img {
     border-radius: 0;
-    }
+  }
 }
 
 

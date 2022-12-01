@@ -1,17 +1,82 @@
-.portrait {
-  background-color: #eee;
-  display:grid;
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter&family=Lobster&display=swap');
+
+/* GENERAL */
+
+:root {
+  --light-foreground: #b26322;
+  --light-background: #ffeb3b;
+}
+
+body {
+  background-color: var(--light-background);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-size: calc(16px + (18-16)*(100vw - 80vw)/(1200 - 320));
+}
+
+/* TYPOGRAPHY */
+
+h1,h2 {
+  color: var(--light-foreground);
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: calc(40px + (485-40)*(100vw - 80vw)/(1200 - 320));
+  margin: 0;
+}
+h2 {
+  font-family: 'Bree Serif', serif;
+  margin: 0;
+  font-size: calc(25px + (225-40)*(100vw - 80vw)/(1200 - 320));
+}
+p {
+  font-family: 'Inter', sans-serif;
+}
+
+/* COMPONENTS */
+
+/* Gallery - && - Text */
+
+/* GT Parent */
+
+.grid-gallery-text {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 0.75rem;
+  margin: 1rem;
+}
+
+/* GT Children */
+
+.gallery-text {
+  grid-column: 9/17;
+}
+
+.gallery-portrait {
+  /* child placement */
+  grid-column: span 8;
+  /* subgrid */
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
+  margin-right: 1rem;
 }
 
 .image1 {
   grid-column: 1/3;
   grid-row: 1/3;
 }
-.portrait img {
+.gallery-portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: solid 6px var(--light-foreground);
+}
+
+@media only screen and (max-width: 760px) {
+  .grid-gallery-text {
+    display: block;
+  }
 }

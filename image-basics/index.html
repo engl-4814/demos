@@ -76,18 +76,20 @@
           3 SRCSET Values and Syntax
             1. An image path/filename
             2. A space
-            3. The image's intrinsic width in pixels
+            3. The image's intrinsic width in pixels (w) or pixel ratio (x)
          -->
-        <img srcset="images/cute-kittens-480.jpg 480w,
+        <img src="images/cute-kittens-480.jpg"
+             srcset="images/cute-kittens-480.jpg 480w,
                      images/cute-kittens-960.jpg 960w,
                      images/cute-kittens-1440.png 1440w"
-             sizes="(max-width: 480px) 320px,
-                    (max-width: 960px) 480px,
-                    (max-width: 1440px) 960px,1200px"
              alt="Five cute kittens set in a row on some green grass"   
         />
         <!-- 
           3 SIZES Attributes
+            Example: 
+             sizes="(max-width: 480px) 320px,
+                    (max-width: 960px) 480px,
+                    (max-width: 1440px) 960px,1200px"
             1. A media condition (max-width: 480px) - a media condition describes a the sizing state of the user's viewport (screen), e.g., 
               * (max-width: 480px) == "when the viewport width is a maximum of 480 pixels or less"
               * (min-width: 480px) == "when the viewport width is a minimum of 480 pixels or more"

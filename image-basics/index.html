@@ -3,8 +3,9 @@
 <head>
   <title>Home - Kittens'R'Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -76,13 +77,13 @@
           3 SRCSET Values and Syntax
             1. An image path/filename
             2. A space
-            3. The image's intrinsic width in pixels (w) or pixel ratio (x)
+            3. The image's intrinsic width in pixels (w) or pixel density (x)
          -->
-        <img src="images/cute-kittens-480.jpg"
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Cute-kittens-12929201-1600-1200.jpg"
+             alt="Five cute kittens set in a row on some green grass"
              srcset="images/cute-kittens-480.jpg 480w,
                      images/cute-kittens-960.jpg 960w,
                      images/cute-kittens-1440.png 1440w"
-             alt="Five cute kittens set in a row on some green grass"   
         />
         <!-- 
           3 SIZES Attributes
@@ -128,6 +129,7 @@
         alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" /&gt;
 &lt;/picture>
       </pre>
+      
       <picture>
 
         <!--

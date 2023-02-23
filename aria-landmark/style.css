@@ -57,5 +57,10 @@ a.skip-to-link:focus {
   margin: auto;
 }
 
+/* Images */
+.banner_img {
+  display: block;
+  width: 100%;
+}
 /* Other Styles */
 abbr {cursor: help;}

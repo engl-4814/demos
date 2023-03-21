@@ -22,6 +22,7 @@ h1 { font-size: 2.25rem; /* @ 18px, computes to 40.50px */ }
 h2 { font-size: 1.75rem;  /* @ 18px, computes to 27.00px */ } 
 h3 { font-size: 1.25rem;/* @ 18px, computes to 20.25px */}
 h4 { font-size: 1.25rem; font-style: italic; }
+aside { font-size: 0.9rem;}
 
 /* Font Families */
 body { font-family: Metrophobic; }
@@ -39,9 +40,9 @@ aside {
 
 aside h2 {
   font-family: Metrophobic;
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 aside p {
   font-family: Roboto;
-  font-size: 0.85rem;
+  font-size: 0.85em;
 }

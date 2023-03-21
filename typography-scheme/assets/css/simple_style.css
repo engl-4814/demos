@@ -3,40 +3,35 @@
 @import url('https://fonts.googleapis.com/css?family=Monoton|Metrophobic|Roboto');
 
 /* 
-  1. GENERAL
+  GENERAL
 */
 
-html {
+:root {
   font-size: 18px; /* Define root font-size */
   background: antiquewhite;
 }
 
-/* 2. TYPOGRPAHY SCHEME */
-
-/* Font Sizing */
-h1 { font-size: 2.25rem; /* @ 18px, computes to 40.50px */ } 
-h2 { font-size: 1.5rem;  /* @ 18px, computes to 27.00px */ } 
-h3 { font-size: 1.125rem;/* @ 18px, computes to 20.25px */}
-h4 { font-size: 1.05rem; font-style: italic; }
-
-/* Font Families */
-h1, h2, h3, h4 { 
-  font-family: Monoton;
-}
-p {
-  font-family: Metrophobic;
-}
-
-/* 3. MAIN */
-main {
-  /* width: 55%; */
+body {
   padding: 2em;
 }
 
-/* 4. ASIDE */
+/* TYPOGRPAHY SCHEME */
+
+/* Font Sizing */
+h1 { font-size: 2.25rem; /* @ 18px, computes to 40.50px */ } 
+h2 { font-size: 1.75rem;  /* @ 18px, computes to 27.00px */ } 
+h3 { font-size: 1.25rem;/* @ 18px, computes to 20.25px */}
+h4 { font-size: 1.25rem; font-style: italic; }
+
+/* Font Families */
+body { font-family: Metrophobic; }
+h1, h2, h3, h4 { font-family: Monoton; }
+
+/* ASIDE */
 
 aside {
   width: 20%;
+  float: right;
   padding: 2em;
   border: 1px solid #e2ccaf;
   box-shadow: 6px 7px 1px 0px #e2ccaf;

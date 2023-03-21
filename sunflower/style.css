@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-size: calc(16px + (18-16)*(100vw - 80vw)/(1200 - 320));
+  font-size: calc(16px + (18 - 16)*(100vw - 80vw)/(1200 - 320));
 }
 
 header {
@@ -29,14 +29,14 @@ h1,h2 {
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 20vw;
-  font-size: calc(40px + (485-40)*(100vw - 80vw)/(1200 - 320));
+  font-size: calc(40px + (485 - 40)*(100vw - 80vw)/(1200 - 320));
   margin: 0;
 }
 h2 {
   font-family: 'Bree Serif', serif;
   margin: 0;
   font-size: 8vw;
-  font-size: calc(25px + (225-40)*(100vw - 80vw)/(1200 - 320));
+  font-size: calc(25px + (225 - 40)*(100vw - 80vw)/(1200 - 320));
 }
 p {
   font-family: 'Inter', sans-serif;

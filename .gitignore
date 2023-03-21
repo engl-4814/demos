@@ -72,3 +72,6 @@ rules-of-thumb/rot.md
 grid-areas/breaking-title.html
 feature-wheel
 walkman
+
+# min files
+*.min.*

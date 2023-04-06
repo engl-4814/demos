@@ -2,20 +2,18 @@
 .container > * {
   border: 2px solid black;
   padding: 1.75em;
-  /* margin-bottom: 5vh; */
 }
-/* .header {padding: 0;position: relative;} */
 
 /* GRID */
 
 /* Define grid area keywords */
-.header        { grid-area: header; }
-.nav_left      { grid-area: nav_left; }
-.sidebar_right { grid-area: sidebar_right; }
-.content-1     { grid-area: content-1; }
-.content-2     { grid-area: content-2; }
-.content-3     { grid-area: content-3; }
-.footer        { grid-area: footer; }
+.header         { grid-area: header; }
+.nav__left      { grid-area: nav_left; }
+.sidebar__right { grid-area: sidebar_right; }
+.content__1     { grid-area: content_1; }
+.content__2     { grid-area: content_2; }
+.content__3     { grid-area: content_3; }
+.footer         { grid-area: footer; }
 
 /* 
   - Define grid
@@ -30,8 +28,8 @@
   grid-gap: 1rem;
   grid-template-areas:
     "header header header"
-    "nav_left content-1 sidebar_right"
-    "nav_left content-2 sidebar_right"
-    "nav_left content-3 sidebar_right"
+    "nav_left content_1 sidebar_right"
+    "nav_left content_2 sidebar_right"
+    "nav_left content_3 sidebar_right"
     "footer footer footer"; 
 }

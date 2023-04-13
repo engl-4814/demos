@@ -6,11 +6,14 @@
 */
 main > * {
   background: blueviolet;
-  font-size: clamp(1rem, 2rem, 2.5rem);
   color: azure;
   font-weight: bolder;
+  margin: 1rem;
   padding: 0.5em;
 }
+
+h1 {font-size: 1.25rem;}
+h2 {font-size: 1.05rem;}
 
 /* GRID */
 
@@ -20,13 +23,13 @@ nav               {grid-area: nav;}
 .first_priority   {grid-area: pr1;}
 .second_priority  {grid-area: pr2;}
 aside             {grid-area: aside;}
-footer            {grid-area: footer;}
+footer            {grid-area: ftr;}
 
 /* Tablet/Medium-Sized Screens */
 @media screen and (min-width: 768px) {
   main {
     display: grid;
-    grid-template-columns: 40ch 80ch 1fr 1fr 1fr;
+    grid-template-columns: 30ch repeat(2, 2fr) 1fr 1fr;
     grid-template-rows: repeat(7, 1fr);
     gap: 1em;
     grid-template-areas:
@@ -35,16 +38,18 @@ footer            {grid-area: footer;}
       "nav pr1 pr1 pr1 pr1"
       "nav pr2 pr2 pr2 pr2"
       "aside aside aside aside aside"
-      "footer footer footer footer footer"
+      "ftr ftr ftr ftr ftr"
       ;
   }
+
+  main > * { margin: 0; }
 }
 
 /* Desktop/Larger-Sized Screens */
 @media screen and (min-width: 1200px) {
   main {
     display: grid;
-    grid-template-columns: 40ch 80ch 1fr 1fr 40ch;
+    grid-template-columns: 30ch repeat(2, 2fr) 1fr 30ch;
     grid-template-rows: repeat(7, 1fr);
     gap: 1em;
     grid-template-areas:
@@ -54,9 +59,11 @@ footer            {grid-area: footer;}
       "nav pr1 pr1 pr1 aside"
       "nav pr2 pr2 pr2 aside"
       "nav pr2 pr2 pr2 aside"
-      "footer footer footer footer footer"
+      "ftr ftr ftr ftr ftr"
       ;
   }
+
+  main > * { margin: 0; }
 }
 
 /* XL Screens */

@@ -9,20 +9,35 @@
 </head>
 <body>
 
-  <h1>Fitting an Image to the Parent Container with <code>width</code> + <code>%</code> value &amp;&amp; Floats too!</h1>
-
+  <!--
+    PERCENTAGE OF PARENT CONTAINER
+  -->
   <!-- 
     Note how the image will keep its aspect-ratio, filling up the height of the container automatically. If you do not want the image to set the height of the container, check out the 'object-fit' CSS technique. 
   -->
+  <h2>1. PERCENTAGE OF PARENT CONTAINER</h2>
   <div class="percentage-container">
     <img src="https://via.placeholder.com/800x800" alt="Placeholder image">
   </div>
 
-  <!-- 
-    These next 2 content areas wrapped in the div containers don't quite work well together. Why? Play around with the float and width rules on the image, as well as the clear:both rule on the class applied to the last div. What happens? How can you achieve a better content design?
+  <!--
+    OBJECT-FIT
   -->
+  <h2>2. OBJECT-FIT WITHIN PARENT CONTAINER</h2>
+  <div class="object_fit">
+    <img class="object_fit__cover" src="https://via.placeholder.com/800x800" alt="Placeholder image">
+  </div>
+
+  <!-- 
+    These next 2 content areas wrapped in the div containers don't quite work well together. Why? 
+    
+    Play around with the float and width rules on the image, as well as the clear:both rule on the class applied to the empty div. 
+    
+    What happens? How can you achieve a better content design?
+  -->
+  <h2>3. CLEAR FIX FLOATS</h2>
   <div class="percentage-container">
-    <h2>With content now</h2>
+    <h3>With content now</h2>
     <img src="https://via.placeholder.com/800x800"
          class="img-float-right"
          alt="Placeholder image">
@@ -32,10 +47,11 @@
     <p>
       Sit consectetur qui maxime deserunt, ab excepturi facilis, eaque id hic est tempora voluptatibus porro accusantium molestias optio, repellendus ea? Aut cumque veritatis quaerat vel, incidunt perspiciatis voluptatibus ad rem voluptate minima. Cumque illo consequuntur dolore soluta aspernatur asperiores molestiae impedit quos, eaque, corporis, qui assumenda? Similique dolorum animi ipsam.
     </p>
+    <div class="clear_fix"></div>
   </div>
 
   <div class="demo-imp-clear">
-    <h2>Some content below the potentially floated image above</h2>
+    <h3>Some content below the potentially floated image above</h3>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quos laudantium aperiam, nisi beatae veritatis, amet repudiandae placeat vitae optio repellat cumque nemo fuga facere.
     </p>

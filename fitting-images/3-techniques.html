@@ -9,25 +9,32 @@
 </head>
 <body>
 
-  <!--
-    PERCENTAGE OF PARENT CONTAINER
-  -->
+  <!--=============================
+  1. PERCENTAGE OF PARENT CONTAINER
+  ==============================-->
   <!-- 
     Note how the image will keep its aspect-ratio, filling up the height of the container automatically. If you do not want the image to set the height of the container, check out the 'object-fit' CSS technique. 
   -->
-  <h2>1. PERCENTAGE OF PARENT CONTAINER</h2>
-  <div class="percentage-container">
-    <img src="https://via.placeholder.com/800x800" alt="Placeholder image">
-  </div>
+  <section>
+    <h2>1. PERCENTAGE OF PARENT CONTAINER</h2>
+    <div class="percentage-container">
+      <img src="https://via.placeholder.com/800x800" alt="Placeholder image">
+    </div>
+  </section>
 
-  <!--
-    OBJECT-FIT
-  -->
-  <h2>2. OBJECT-FIT WITHIN PARENT CONTAINER</h2>
-  <div class="object_fit">
-    <img class="object_fit__cover" src="https://via.placeholder.com/800x800" alt="Placeholder image">
-  </div>
+  <!--=========
+  2. OBJECT-FIT
+  ==========-->
+  <section>
+    <h2>2. OBJECT-FIT WITHIN PARENT CONTAINER</h2>
+    <div class="object_fit">
+      <img class="object_fit__cover" src="https://via.placeholder.com/800x800" alt="Placeholder image">
+    </div>
+  </section>
 
+  <!--===========
+  3. CLEAR FLOATS
+  ============-->
   <!-- 
     These next 2 content areas wrapped in the div containers don't quite work well together. Why? 
     

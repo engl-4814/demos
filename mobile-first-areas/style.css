@@ -71,16 +71,19 @@ footer            {grid-area: ftr;}
   main {
     display: grid;
     grid-template-columns: 150px 40ch 1fr 40ch 150px;
-    grid-template-rows: repeat(7, 1fr);
-    gap: 5em;
+    grid-template-rows: 30vh repeat(6, 1fr) 20vh;
     grid-template-areas:
       "hdr hdr hdr hdr hdr"
-      ". nav pr1 aside ."
-      ". nav pr1 aside ."
-      ". nav pr1 aside ."
-      ". nav pr2 aside ."
-      ". nav pr2 aside ."
-      "footer footer footer footer footer"
+      "nav pr1 pr1 pr1 ."
+      "nav pr1 pr1 pr1 ."
+      "nav aside pr2 pr2 ."
+      "nav aside pr2 pr2 ."
+      "nav aside ftr ftr ."
+      "nav aside ftr ftr ."
       ;
+  }
+
+  main > * {
+    margin-bottom: 8px;
   }
 }

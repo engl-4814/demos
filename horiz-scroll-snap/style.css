@@ -135,24 +135,22 @@ p {
 /* Slide 6 need extra features, cause it's *extra* */
 
 #slide_6 {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   margin: 0;
   padding: 0;
+
 }
 
-#slide_6>div {
+#slide_6 > div {
   height: 0;
   padding-bottom: 75%;
   position: relative;
   width: 100%
 }
 
-#slide_6 iframe {
-  padding: 0;
-  margin: 0;
-  left: -16px;
-  position: absolute;
-  top: 0;
-  width: 97vw;
-  height: 50vh;
+#slide_6 img {
+  width: 100%;
+  height: 100%;
 }

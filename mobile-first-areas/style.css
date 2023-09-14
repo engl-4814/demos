@@ -5,8 +5,8 @@
   to nearly empty grid kids
 */
 main > * {
-  background: blueviolet;
-  color: azure;
+  border: 4px solid blueviolet;
+  color: blueviolet;
   font-weight: bolder;
   margin: 1rem;
   padding: 0.5em;

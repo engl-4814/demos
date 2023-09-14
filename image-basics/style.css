@@ -1,9 +1,9 @@
 /* BASIC TYPOGRAPHY */
-h1      {font-size: 3rem;}
-h2      {font-size: 2.5rem;}
-h3      {font-size: 2rem;font-style: italic;}
-p,ol,ul {font-size: 1.25rem;}
-pre,code    {font-size: 1.5rem;}
+h1        {font-size: 3rem;}
+h2        {font-size: 2.5rem;}
+h3        {font-size: 2rem;font-style: italic;}
+p,ol,ul   {font-size: 1.25rem;}
+pre,code  {font-size: 1.5rem;}
 
 /* .note */
 pre,.note {

@@ -21,12 +21,12 @@
   <main>
 
     <!-- IMG element: Basics + srcset & sizes attributes -->
-    <section id="img">
+    <article id="img">
 
       <h2>Kittens in the <code>&lt;img&gt;</code> element</h2>
 
       <!-- BASIC IMAGE -->
-      <div id="img__basics">
+      <section id="img__basics">
         <h3>The Basics</h3>
         <p>
           Below, I use one of my image files to render an image with the <code>src</code>, <code>width</code>, <code>height</code>, and <code>alt</code> attributes.
@@ -38,10 +38,10 @@
              width="480px" height="267px"
              alt="Five cute kittens set in a row on some green grass" />
       
-      </div>
+      </section>
 
       <!-- IMAGE WITH SRCST & SIZES -->
-      <div id="img__srcset_and_sizes">
+      <section id="img__srcset_and_sizes">
         <h3>Using srcset &amp; sizes</h3>
         <p>
           In the <code>img</code> element below, I use a set of the same 3 images, but differently sized, by using the <code>srcset</code> and <code>sizes</code> attributes. Use the:
@@ -79,7 +79,7 @@
             2. A space
             3. The image's intrinsic width in pixels (w) or pixel density (x)
          -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Cute-kittens-12929201-1600-1200.jpg"
+        <img src="images/cute-kittens-960.jpg"
              alt="Five cute kittens set in a row on some green grass"
              srcset="images/cute-kittens-480.jpg 480w,
                      images/cute-kittens-960.jpg 960w,
@@ -90,19 +90,19 @@
             Example: 
              sizes="(max-width: 480px) 320px,
                     (max-width: 960px) 480px,
-                    (max-width: 1440px) 960px,1200px"
+                    (max-width: 1440px) 960px, 1200px"
             1. A media condition (max-width: 480px) - a media condition describes a the sizing state of the user's viewport (screen), e.g., 
               * (max-width: 480px) == "when the viewport width is a maximum of 480 pixels or less"
               * (min-width: 480px) == "when the viewport width is a minimum of 480 pixels or more"
             2. A space
             3. The width of the slot the image will fill when the media condition is true (479px)
          -->
-      </div>
+      </section>
 
-    </section>
+    </article>
 
     <!-- The new PICTURE element! -->
-    <section id="picture__source">
+    <article id="picture__source">
 
       <h2>Kittens in the <code>&lt;picture&gt;</code> element</h2>
       <p>
@@ -156,7 +156,7 @@
              alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" />
       </picture>
 
-    </section>
+    </article>
   </main>
 </body>
 </html>

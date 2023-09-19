@@ -11,8 +11,8 @@
 <body>
   <header>
     <img src="images/kittens/kittensrus-logo.gif"
-         width="93px" 
-         height="98px" 
+         width="93px"
+         height="98px"
          alt="" />
     <h1>
       Kittens'R'Us
@@ -34,10 +34,10 @@
         <p class="note">
           <strong>NOTE</strong>: We use the <code>width</code> and <code>height</code> attributes to tell the browser to reserve loading space. We do not use it to for styling/design. After we learn CSS, we can design flexible sizing of images with CSS.
         </p>
-        <img src="images/kittens/cute-kittens-480.jpg"
+        <img src="images/kittens/cute-kittens-480x267.jpg"
              width="480px" height="267px"
              alt="Five cute kittens set in a row on some green grass" />
-      
+
       </section>
 
       <!-- IMAGE WITH SRCST & SIZES -->
@@ -75,27 +75,28 @@
             Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your code editor.
           </p>
         </div>
-        <!-- 
+        <!--
           3 SRCSET Values and Syntax
             1. An image path/filename
             2. A space
             3. The image's intrinsic width in pixels (w) or pixel density (x)
          -->
-        <img src="images/kittens/cute-kittens-960.jpg"
+        <img src="images/kittens/cute-kittens-960x533.jpg"
              alt="Five cute kittens set in a row on some green grass"
-             srcset="images/kittens/cute-kittens-480.jpg 480w,
-                     images/kittens/cute-kittens-960.jpg 960w,
-                     images/kittens/cute-kittens-1440.png 1440w"
+             width="480" height=""
+             srcset="images/kittens/cute-kittens-480x267.jpg 480w,
+                     images/kittens/cute-kittens-960x533.jpg 960w,
+                     images/kittens/cute-kittens-1440x800.png 1440w"
              sizes="(min-width: 960px) 960px,
                     (min-width: 1440px) 1440px"
         />
-        <!-- 
+        <!--
           3 SIZES Attributes
-            Example: 
+            Example:
              sizes="(max-width: 480px) 320px,
                     (max-width: 960px) 480px,
                     (max-width: 1440px) 960px, 1200px"
-            1. A media condition (max-width: 480px) - a media condition describes a the sizing state of the user's viewport (screen), e.g., 
+            1. A media condition (max-width: 480px) - a media condition describes a the sizing state of the user's viewport (screen), e.g.,
               * (max-width: 480px) == "when the viewport width is a maximum of 480 pixels or less"
               * (min-width: 480px) == "when the viewport width is a minimum of 480 pixels or more"
             2. A space
@@ -124,39 +125,39 @@
         </li>
       </ol>
       <pre>&lt;picture&gt;
-  &lt;source media="(max-width: 480px)" 
+  &lt;source media="(max-width: 480px)"
           srcset="images/kittens/cute-kittens-135-cropped.jpg"&gt;
-  &lt;source media="(min-width: 960px)" 
+  &lt;source media="(min-width: 960px)"
           srcset="images/kittens/cute-kittens-960.jpg"&gt;
-  
+
   &lt;img src="images/kittens/cute-kittens-480.jpg"
         alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" /&gt;
 &lt;/picture>
       </pre>
-      
+
       <picture>
 
         <!--
           <source> elements use media and srcset attributes
-          
+
           In this case, the cropped version is displayed
           if the viewport is __student_answer_here__.
         -->
-        <source media="(max-width: 480px)" 
-                srcset="images/kittens/cute-kittens-135-cropped.jpg">
-        
+        <source media="(max-width: 480px)"
+                srcset="images/kittens/cute-kittens-135x266-cropped.jpg">
+
         <!--
-          In this case, the full 960px wide version is 
+          In this case, the full 960px wide version is
           displayed if the viewport is __student_answer_here__.
         -->
-        <source media="(min-width: 960px)" 
-                srcset="images/kittens/cute-kittens-960.jpg">
+        <source media="(min-width: 960px)"
+                srcset="images/kittens/cute-kittens-960x533.jpg">
 
         <!--
           ALWAYS include the <img> as a fallback for older browsers,
           which also includes the alt attribute.
         -->
-        <img src="images/kittens/cute-kittens-480.jpg"
+        <img src="images/kittens/cute-kittens-480x267.jpg"
              alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" />
       </picture>
 

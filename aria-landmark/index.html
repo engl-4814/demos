@@ -3,15 +3,24 @@
 <head>
 	<title>ARIA landmark region demonstration</title>
   <link type="text/css" rel="stylesheet" href="style.css" />
-  <!-- 
-    Modified from demo provided by TPGi (Previously known as The Paciello Group): 
-    https://www.tpgi.com/using-wai-aria-landmarks-2013/ 
+  <!--
+    Modified from demo provided by TPGi (Previously known as The Paciello Group):
+    https://www.tpgi.com/using-wai-aria-landmarks-2013/
   -->
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPWN43QHBB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPWN43QHBB');
+</script>
 <body>
   <a href="#a11y-basics" class="skip-to-link">Skip to content</a>
   <header role="banner" aria-labelledby="a11y-title">
-    <img src="https://via.placeholder.com/100x50?Text=LOGO" 
+    <img src="https://via.placeholder.com/100x50?Text=LOGO"
          alt="" />
     <h1 id="a11y-title">
       Accessibility'R'Us
@@ -25,7 +34,7 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    
+
     <main id="main" role="main" aria-labelledby="a11y-basics">
       <h2 id="a11y-basics">
         Accessibility Basics
@@ -56,7 +65,7 @@
         Twitter feed here, perhaps
       </p>
     </aside>
-    
+
     <footer id="resources" role="contentinfo" aria-labelledby="a11y-resources">
       <h2 id="a11y-resources">
         Footer with important resources

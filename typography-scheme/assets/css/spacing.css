@@ -1,0 +1,44 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Marvin Visions Variable';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
+}
+
+/*=======
+  GENERAL
+=======*/
+
+:root {
+  font-size: 20px;
+}
+
+/*==========
+  TYPOGRAPHY
+==========*/
+
+/* Font Families */
+body { font-family: 'Inter'; }
+h1,h2,h3,h4,h5,h6 { font-family: 'Marvin Visions Variable'; }
+
+/* Font Styling */
+h3 { font-style: italic; }
+
+/* Spacing */
+ul, ul ul,
+ol, ol ol {
+  margin: 1rem 0;
+  padding-inline-start: 2.5rem;
+}
+ul > *, ol + * {
+  margin-top: 1rem;
+}
+main > * ~ * {
+  margin-block-start: 1.5rem;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: auto;
+}

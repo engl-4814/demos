@@ -1,13 +1,13 @@
 main {
   display: grid;
-  grid-template-columns: 50px repeat(3, 1fr) 100px;
+  grid-template-columns: auto 1fr auto;
 }
 
 main > div {
-  border:chocolate solid 5px;
-  height: 50px;
+  border:chocolate solid 2px;
+  /* height: 50px; */
 }
 
-.big_chocolate {
+/* .big_chocolate {
   grid-column: 3 / 5;
-}
+} */

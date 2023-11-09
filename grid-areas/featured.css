@@ -35,14 +35,18 @@ img {
 .fa_top { grid-area: article_1; }
 .fa_2   { grid-area: article_2; }
 .fa_3   { grid-area: article_3; }
+.fa_4   { grid-area: article_4; }
 
 /* How could I create a grid on the featured_articles__container class? */
 .featured_articles__container {
+  max-width: 1280px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
     "article_1 article_1 article_1 article_1"
     "article_1 article_1 article_1 article_1"
     "article_2 article_2 article_3 article_3"
+    "article_4 article_4 article_4 article_4"
   ;
 }

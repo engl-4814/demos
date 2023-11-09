@@ -1,11 +1,10 @@
+/* GENERAL */
 
 body {
   background: blueviolet;
 }
 
-h1 {
-  color: white;
-}
+h1 { color: white; }
 
 /* Default Image Behavior */
 img {
@@ -13,15 +12,14 @@ img {
   width: 100%;
 }
 
-/* General */
+/* Flex Round-to-Fit Image - Text */
 
-section > div {
+.flex__mf_round_to_fit_container > div {
   color: white;
   padding: 5px;
 }
 
-/* Mobile-First */
-.media {
+.flex__mf_round_to_fit_img {
   float: left;
   width: 150px;
   height: 150px;
@@ -29,7 +27,7 @@ section > div {
   border-radius: 50%;
   shape-outside: circle();
 }
-.media > img {
+.flex__mf_round_to_fit_img > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -38,29 +36,35 @@ section > div {
 
 /* Medium */
 @media screen and (min-width: 600px) {
-  .media {
+
+  /* Flex Round-to-Fit Image - Text */
+  .flex__mf_round_to_fit_img {
     width: 320px;
     height: 320px;
   }
+
 }
 
 /* Large */
 @media screen and (min-width: 980px) {
-  section {
+
+  /* Flex Round-to-Fit Image - Text */
+  .flex__mf_round_to_fit_container {
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
   }
-  .media {
+  .flex__mf_round_to_fit_img {
     padding: 0;
     flex: 0 0.5 900px;
     border-radius: 0;
     shape-outside: none;
   }
-  .media > img {
+  .flex__mf_round_to_fit_image_text_media > img {
     border-radius: 0;
   }
+
 }
 
 

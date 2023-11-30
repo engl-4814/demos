@@ -5,6 +5,13 @@ h2 {
   text-align: center;
 }
 
+/* INTRINSIC SIZE CONTAINER */
+.intrinsic_size_container {
+  width: 50vw;
+  margin: 4rem auto;
+  border: 2px solid black;
+}
+
 /* SHARED BOX SIZING */
 .percentage-container,
 .object_fit {

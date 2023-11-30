@@ -12,24 +12,27 @@ img {
   /* change all images to block */
   display: block;
   /* Tell all images to fill 100% width of their container by default*/
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* SHARED BOX SIZING */
-/* max-width on parent for demo purposes */
 .percentage-container,
+.object_fit,
 .demo-imp-clear {
-  max-width: 750px;
+  width: 50vw;
+  height: 30vh;
   margin: 4rem auto;
   border: 2px solid black;
 }
 
-/* Object-Fit -- Cover*/
-.object_fit {
-  max-width: 400px;
-  margin: 4rem auto;
-  border: 2px solid black;
+/* Percentage Image */
+.percentage-container img {
+  width: 100%;
+  height: 100%;
 }
+
+/* Object-Fit -- Cover*/
 /* 
   You NEED to provide the width-height values for object-fit to work. This example uses the value of "cover" 
 

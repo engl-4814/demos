@@ -14,3 +14,9 @@ pre,.note {
   max-width: fit-content;
   word-wrap: break-word;
 }
+
+p,.note,ul,ol {
+  max-width: 700px;
+}
+
+/* MAIN LAYOUT */

@@ -24,15 +24,14 @@
          height="98px"
          alt="" />
     <h1>
-      Kittens'R'Us
+      Kittens &amp; Dinos
     </h1>
   </header>
   <main>
 
     <!-- IMG element: Basics + srcset & sizes attributes -->
     <article id="img">
-
-      <h2>Kittens in the <code>&lt;img&gt;</code> element</h2>
+      <h2>Kittens &amp; Dinos in the <code>&lt;img&gt;</code> element</h2>
 
       <!-- BASIC IMAGE -->
       <section id="img__basics">
@@ -49,37 +48,27 @@
 
       </section>
 
-      <!-- IMAGE WITH SRCST & SIZES -->
-      <section id="img__srcset_and_sizes">
-        <h3>Using srcset &amp; sizes</h3>
+      <!-- IMAGE WITH SRCSET -->
+      <section id="img__srcset">
+        <h3>On <code>srcset</code></h3>
         <div>
           <p>
-            In the <code>img</code> element below, I use a set of the same 3 images, but differently sized, by using the <code>srcset</code> and <code>sizes</code> attributes. Use the:
+            In the <code>img</code> element below, I use the <code>srcset</code> attribute to provide the browser a set of images to choose from for the user, based on factors like their device width, internet connection, and pixel density of the screen.
           </p>
-          <ul>
+          <p>
+            Each image source in the <code>srcset</code> needs 3 values separated by a comma and all contained within double-quotation marks:
+          </p>
+          <ol>
             <li>
-              <code>w</code> (width) value for the <code>srcset</code>, and
+              An image path to the file,
             </li>
             <li>
-              In <code>sizes</code>:
-              <ol>
-                <li>
-                  Within parantheses, the <code>max-width</code> or <code>min-width</code> query attribute that uses the length value, such as <code>px</code> (pixel) in its query.
-                <li>
-                  After the paranthentical query, add a length value, such as a <code>px</code> value, for the image to be, when the condition has been met.
-              </ol>
+              a space, and
             </li>
-          </ul>
-          <pre>&lt;img srcset="images/kittens/cute-kittens-480.jpg 480w,
-            images/kittens/cute-kittens-960.jpg 960w,
-            images/kittens/cute-kittens-1440.png 1440w"
-    sizes="(max-width: 480px) 320px,
-          (max-width: 960px) 480px,
-          (max-width: 1440px) 960px,
-          1440px"
-    alt="Five cute kittens set in a row on some green grass"
-  /&gt;
-          </pre>
+            <li>
+              The image's intrinsic width in pixels (<code>w</code>) or pixel density (<code>x</code>)
+            </li>
+          </ol>
           <p>
             Use the inspection tool to review the syntax, or, if you have cloned this repo, open and review it in your code editor.
           </p>
@@ -90,86 +79,14 @@
             2. A space
             3. The image's intrinsic width in pixels (w) or pixel density (x)
          -->
-        <img src="images/kittens/cute-kittens-960x533.jpg"
-             alt="Five cute kittens set in a row on some green grass"
-             width="480" height=""
-             srcset="images/kittens/cute-kittens-480x267.jpg 480w,
-                     images/kittens/cute-kittens-960x533.jpg 960w,
-                     images/kittens/cute-kittens-1440x800.png 1440w"
-             sizes="(min-width: 960px) 960px,
-                    (min-width: 1440px) 1440px"
+        <img src="./images/dinos/tyranasaurus-rex-dinosaur-skeleton-320.jpg"
+             width="960" height="533"
+             srcset="images/dinos/tyranasaurus-rex-dinosaur-skeleton-320.jpg 320w,
+                     images/dinos/tyranasaurus-rex-dinosaur-skeleton-640.jpg 640w,
+                     images/dinos/tyranasaurus-rex-dinosaur-skeleton-960.png 960w"
+             alt="The large mouth of a Tyranasaurus Rex skeleton on display"
         />
-        <!--
-          3 SIZES Attributes
-            Example:
-             sizes="(max-width: 480px) 320px,
-                    (max-width: 960px) 480px,
-                    (max-width: 1440px) 960px, 1200px"
-            1. A media condition (max-width: 480px) - a media condition describes a the sizing state of the user's viewport (screen), e.g.,
-              * (max-width: 480px) == "when the viewport width is a maximum of 480 pixels or less"
-              * (min-width: 480px) == "when the viewport width is a minimum of 480 pixels or more"
-            2. A space
-            3. The width of the slot the image will fill when the media condition is true (479px)
-         -->
       </section>
-
-    </article>
-
-    <!-- The new PICTURE element! -->
-    <article id="picture__source">
-
-      <h2>Kittens in the <code>&lt;picture&gt;</code> element</h2>
-      <p>
-        Below, I use the newer <code>picture</code> element that uses some simpler and more readable syntax:
-      </p>
-      <ol>
-        <li>
-          uses the standard <code>&lt;img&gt;</code> as the default use of the smallest image file.
-        </li>
-        <li>
-          but <code>&lt;picture&gt;</code> also uses the <code>&lt;source&gt;</code> element to tell the browser to use the next largest image at a specified minimum width (px) of your choice.
-        </li>
-        <li>
-          but the <code>&lt;picture&gt;</code> uses the <code>&lt;source&gt;</code> element to tell the browser to otherwise use the cropped version of your medium-sized file.
-        </li>
-      </ol>
-      <pre>&lt;picture&gt;
-  &lt;source media="(max-width: 480px)"
-          srcset="images/kittens/cute-kittens-135-cropped.jpg"&gt;
-  &lt;source media="(min-width: 960px)"
-          srcset="images/kittens/cute-kittens-960.jpg"&gt;
-
-  &lt;img src="images/kittens/cute-kittens-480.jpg"
-        alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" /&gt;
-&lt;/picture>
-      </pre>
-
-      <picture>
-
-        <!--
-          <source> elements use media and srcset attributes
-
-          In this case, the cropped version is displayed
-          if the viewport is __student_answer_here__.
-        -->
-        <source media="(max-width: 480px)"
-                srcset="images/kittens/cute-kittens-135x266-cropped.jpg">
-
-        <!--
-          In this case, the full 960px wide version is
-          displayed if the viewport is __student_answer_here__.
-        -->
-        <source media="(min-width: 960px)"
-                srcset="images/kittens/cute-kittens-960x533.jpg">
-
-        <!--
-          ALWAYS include the <img> as a fallback for older browsers,
-          which also includes the alt attribute.
-        -->
-        <img src="images/kittens/cute-kittens-480x267.jpg"
-             alt="Only 1 of 5 kittens shown in this cropped image *frowny face*" />
-      </picture>
-
     </article>
   </main>
 </body>
